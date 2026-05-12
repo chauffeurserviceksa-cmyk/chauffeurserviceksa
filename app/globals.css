@@ -1,0 +1,132 @@
+:root {
+  --color-black: #111111;
+  --color-white: #FFFFFF;
+  --color-gold: #C9A227;
+  --color-gold-hover: #AB881D;
+  --max-width: 1200px;
+  --header-height: 80px;
+
+  /* Ratio 60:30:10 
+     Let's assume:
+     60% Black (Background)
+     30% White (Text & Cards)
+     10% Gold (Accent)
+  */
+  --bg-primary: var(--color-black);
+  --text-primary: var(--color-white);
+  --accent-primary: var(--color-gold);
+
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Poppins', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: 0.02em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.btn-gold {
+  background: var(--color-gold);
+  color: var(--color-black);
+  padding: 0.8rem 2.2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-family: var(--font-body);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.btn-gold:hover {
+  background: var(--color-gold-hover);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(201, 162, 39, 0.4);
+}
+
+.btn-gold svg {
+  width: 18px;
+  height: 18px;
+}
+
+.section-dark {
+  background: var(--color-black);
+  color: var(--color-white);
+  padding: 5rem 0;
+}
+
+.section-white {
+  background: var(--color-white);
+  color: var(--color-black);
+  padding: 5rem 0;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Form Interactions */
+.form-control:focus {
+  outline: none;
+  border-color: var(--color-gold);
+  background: rgba(255,255,255,0.05);
+}
+
+/* Hover States for Server Components */
+.footer-links a:hover,
+.footer-bottom-links a:hover {
+  color: var(--color-gold) !important;
+}
+
+.blog-card-link:hover {
+  border-color: rgba(201,162,39,0.4) !important;
+  transform: translateY(-5px) !important;
+}
+
+.route-card-link:hover {
+  border-color: var(--color-gold) !important;
+  background-color: rgba(201,162,39,0.1) !important;
+  transform: translateY(-2px) !important;
+}

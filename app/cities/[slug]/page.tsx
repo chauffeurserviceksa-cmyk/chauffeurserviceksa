@@ -1,0 +1,112 @@
+import React from 'react';
+import { Metadata } from 'next';
+import { citiesData } from '@/lib/citiesData';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import ContactForm from '@/components/ContactForm';
+import { motion } from 'framer-motion';
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const city = citiesData[params.slug.toLowerCase()];
+  return {
+    title: city ? `${city.title} | Luxury Chauffeur KSA` : 'City Chauffeur Service',
+    description: city ? city.intro : 'Premium private driver and chauffeur services in Saudi Arabia.'
+  };
+}
+
+export default function CityPage({ params }: { params: { slug: string } }) {
+  const city = citiesData[params.slug.toLowerCase()];
+
+  if (!city) {
+    return <div>City not found</div>;
+  }
+
+  return (
+    <main className="min-h-screen bg-white">
+      <Header />
+      
+      {/* Hero Section */}
+      <section style={{ 
+        height: '60vh', 
+        background: '#111', 
+        display: 'flex', 
+        alignItems: 'center', 
+        justifyContent: 'center', 
+        textAlign: 'center',
+        padding: '0 1rem'
+      }}>
+        <div className="container">
+          <h1 style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', color: 'white', fontFamily: 'var(--font-heading)', marginBottom: '1.5rem' }}>
+            {city.title}
+          </h1>
+          <p style={{ fontSize: '1.25rem', color: 'rgba(255,255,255,0.8)', maxWidth: '800px', margin: '0 auto' }}>
+            Professional private driver and premium airport transfer services in {city.name}.
+          </p>
+        </div>
+      </section>
+
+      {/* Intro & Info */}
+      <section style={{ padding: '8rem 0' }}>
+        <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '5rem' }}>
+          <div>
+            <h2 style={{ fontSize: '2.5rem', marginBottom: '2rem', fontFamily: 'var(--font-heading)' }}>Chauffeur Service in {city.name}</h2>
+            <p style={{ fontSize: '1.15rem', lineHeight: '1.8', color: '#444', marginBottom: '2rem' }}>{city.intro}</p>
+            
+            <h3 style={{ fontSize: '1.8rem', color: 'var(--color-gold)', marginBottom: '1rem' }}>Airport Transfer</h3>
+            <p style={{ fontSize: '1.1rem', lineHeight: '1.7', color: '#555' }}>{city.airport}</p>
+          </div>
+          
+          <div style={{ background: '#111', padding: '3rem', borderRadius: '24px', color: 'white' }}>
+            <h3 style={{ fontSize: '1.8rem', marginBottom: '2rem', color: 'var(--color-gold)' }}>Get a Quote for {city.name}</h3>
+            <ContactForm />
+          </div>
+        </div>
+      </section>
+
+      {/* Routes & Fleet */}
+      <section style={{ padding: '8rem 0', background: '#f9f9f9' }}>
+        <div className="container">
+           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem' }}>
+              <div>
+                <h3 style={{ fontSize: '2rem', marginBottom: '1.5rem' }}>Popular Routes from {city.name}</h3>
+                <ul style={{ listStyle: 'none', padding: 0 }}>
+                  {city.popularRoutes.map((route: string, i: number) => (
+                    <li key={i} style={{ padding: '1rem 0', borderBottom: '1px solid #eee', fontSize: '1.1rem' }}>
+                      <span style={{ color: 'var(--color-gold)', marginRight: '1rem' }}>→</span> {route}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h3 style={{ fontSize: '2rem', marginBottom: '1.5rem' }}>Top Vehicle Options</h3>
+                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                  {city.fleet.map((car: string, i: number) => (
+                    <div key={i} style={{ background: 'white', padding: '0.8rem 1.5rem', borderRadius: '50px', border: '1px solid #ddd', fontWeight: 600 }}>
+                      {car}
+                    </div>
+                  ))}
+                </div>
+              </div>
+           </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section style={{ padding: '8rem 0' }}>
+        <div className="container">
+          <h2 style={{ fontSize: '3rem', textAlign: 'center', marginBottom: '4rem', fontFamily: 'var(--font-heading)' }}>FAQs - {city.name} Chauffeur</h2>
+          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+            {city.faqs.map((faq: any, i: number) => (
+              <div key={i} style={{ marginBottom: '2rem', borderBottom: '1px solid #eee', paddingBottom: '1.5rem' }}>
+                <h4 style={{ fontSize: '1.3rem', marginBottom: '0.8rem', fontWeight: 700 }}>{faq.q}</h4>
+                <p style={{ color: '#666', lineHeight: '1.7' }}>{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+  );
+}
