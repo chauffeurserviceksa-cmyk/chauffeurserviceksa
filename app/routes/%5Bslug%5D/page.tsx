@@ -27,7 +27,7 @@ export default function RoutePage({ params }: { params: { slug: string } }) {
       {/* Route Hero */}
       <section style={{ 
         height: '65vh', 
-        background: 'linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url(/chauffeur-service-saudi-arabia-hero.png)',
+        background: 'linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url(/chauffeur-service-saudi-arabia-hero.webp)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         display: 'flex', 

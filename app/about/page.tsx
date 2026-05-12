@@ -43,7 +43,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div style={{ position: 'relative', borderRadius: '24px', overflow: 'hidden', height: '500px' }}>
-            <img src="/chauffeur-service-saudi-arabia-hero.png" alt="Luxury Fleet Service" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            <img src="/chauffeur-service-saudi-arabia-hero.webp" alt="Luxury Fleet Service" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
         </div>
       </section>

@@ -3,11 +3,11 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 const cities = [
-  { slug: 'riyadh', name: 'Riyadh', img: '/blogs/private-driver-riyadh-saudi-arabia.jpeg', alt: 'Private Driver Riyadh Saudi Arabia' },
-  { slug: 'jeddah', name: 'Jeddah', img: '/blogs/airport-transfer-jeddah-chauffeur.jpeg', alt: 'Airport Transfer Jeddah Saudi Arabia' },
-  { slug: 'makkah', name: 'Makkah', img: '/blogs/luxury-chauffeur-service-makkah.jpeg', alt: 'Luxury Chauffeur Service Makkah Saudi Arabia' },
-  { slug: 'madinah', name: 'Madinah', img: '/blogs/chauffeur-service-madinah-saudi-arabia.jpeg', alt: 'Private Chauffeur Madinah Saudi Arabia' },
-  { slug: 'dammam', name: 'Dammam', img: '/blogs/dammam-chauffeur-service-saudi-arabia.jpeg', alt: 'Luxury Chauffeur Dammam Saudi Arabia' }
+  { slug: 'riyadh', name: 'Riyadh', img: '/blogs/private-driver-riyadh-saudi-arabia.webp', alt: 'Private Driver Riyadh Saudi Arabia' },
+  { slug: 'jeddah', name: 'Jeddah', img: '/blogs/airport-transfer-jeddah-chauffeur.webp', alt: 'Airport Transfer Jeddah Saudi Arabia' },
+  { slug: 'makkah', name: 'Makkah', img: '/blogs/luxury-chauffeur-service-makkah.webp', alt: 'Luxury Chauffeur Service Makkah Saudi Arabia' },
+  { slug: 'madinah', name: 'Madinah', img: '/blogs/chauffeur-service-madinah-saudi-arabia.webp', alt: 'Private Chauffeur Madinah Saudi Arabia' },
+  { slug: 'dammam', name: 'Dammam', img: '/blogs/dammam-chauffeur-service-saudi-arabia.webp', alt: 'Luxury Chauffeur Dammam Saudi Arabia' }
 ];
 
 export default function CitiesSection() {

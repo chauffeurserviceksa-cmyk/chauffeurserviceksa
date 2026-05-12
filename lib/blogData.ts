@@ -6,7 +6,7 @@ export const blogPosts = [
     date: "March 15, 2024",
     readTime: "6 min read",
     excerpt: "Discover the essential tips for navigating Makkah safely and spiritually with our premium chauffeur service during your visit.",
-    image: "/blogs/complete travel guide to Makkah.jpeg",
+    image: "/blogs/complete travel guide to Makkah.webp",
     alt: "Luxury chauffeur service arriving at Holy Kaaba and Masjid al-Haram in Makkah"
   },
   {
@@ -16,7 +16,7 @@ export const blogPosts = [
     date: "March 18, 2024",
     readTime: "5 min read",
     excerpt: "A comprehensive guide to the spiritual significance and peaceful landmarks of Madinah with private driver insights.",
-    image: "/blogs/complete travel guide to Madina.jpeg",
+    image: "/blogs/complete travel guide to Madina.webp",
     alt: "Private driver service at Masjid an-Nabawi in Madinah Saudi Arabia"
   },
   {
@@ -26,7 +26,7 @@ export const blogPosts = [
     date: "March 20, 2024",
     readTime: "4 min read",
     excerpt: "Navigate Riyadh's blend of historic forts and cutting-edge modern architecture with a professional chauffeur.",
-    image: "/blogs/best things to do in Riyadh.jpeg",
+    image: "/blogs/best things to do in Riyadh.webp",
     alt: "Riyadh city skyline at night featuring premium transportation routes"
   },
   {
@@ -36,7 +36,7 @@ export const blogPosts = [
     date: "March 22, 2024",
     readTime: "5 min read",
     excerpt: "Explore the stunning Red Sea coastline and the historic Al-Balad district of Jeddah with elite ground transport.",
-    image: "/blogs/top attractions in Jeddah.jpeg",
+    image: "/blogs/top attractions in Jeddah.webp",
     alt: "Elite chauffeur service along the Jeddah waterfront and city skyline"
   },
   {
@@ -46,7 +46,7 @@ export const blogPosts = [
     date: "March 25, 2024",
     readTime: "4 min read",
     excerpt: "Escape to the cool mountains of Taif and discover the rose city's natural beauty with a luxury private driver.",
-    image: "/blogs/hidden gems in Taif.jpeg",
+    image: "/blogs/hidden gems in Taif.webp",
     alt: "Luxury SUV chauffeur service in the mountainous landscape of Taif Saudi Arabia"
   },
   {
@@ -56,7 +56,7 @@ export const blogPosts = [
     date: "March 28, 2024",
     readTime: "3 min read",
     excerpt: "Learn about the quickest and most comfortable transportation options between Jeddah and Makkah for Umrah.",
-    image: "/blogs/travel from jeddah to makkah.jpeg",
+    image: "/blogs/travel from jeddah to makkah.webp",
     alt: "Premium car service on the scenic highway between Jeddah and Makkah"
   },
   {
@@ -66,7 +66,7 @@ export const blogPosts = [
     date: "April 02, 2024",
     readTime: "4 min read",
     excerpt: "A detailed breakdown of the travel experience between Saudi Arabia's two holy mosques with a private chauffeur.",
-    image: "/blogs/travel guide from Makkah to Madina.jpeg",
+    image: "/blogs/travel guide from Makkah to Madina.webp",
     alt: "Reliable chauffeur service at Madinah architecture and umbrellas"
   },
   {
@@ -76,7 +76,7 @@ export const blogPosts = [
     date: "April 05, 2024",
     readTime: "6 min read",
     excerpt: "Essential logistical information for travelers moving from Riyadh to Makkah with a professional private driver.",
-    image: "/blogs/distance and travel time from Riyadh to Makkah.jpeg",
+    image: "/blogs/distance and travel time from Riyadh to Makkah.webp",
     alt: "Luxury GMC Yukon chauffeur on the Saudi Arabian desert highway"
   },
   {
@@ -86,7 +86,7 @@ export const blogPosts = [
     date: "April 08, 2024",
     readTime: "7 min read",
     excerpt: "Strategic travel tips for the long-distance journey from Dammam to Makkah with elite ground transportation.",
-    image: "/blogs/distance and travel time from Dammam to Makkah.jpeg",
+    image: "/blogs/distance and travel time from Dammam to Makkah.webp",
     alt: "Professional chauffeur service on a long scenic route in the Middle East"
   },
   {
@@ -96,7 +96,7 @@ export const blogPosts = [
     date: "April 10, 2024",
     readTime: "3 min read",
     excerpt: "Simplify your arrival at Jeddah Airport (JED) with our premium VIP chauffeur and meet-and-greet services.",
-    image: "/blogs/airport transfer guide in Jeddah.jpeg",
+    image: "/blogs/airport transfer guide in Jeddah.webp",
     alt: "VIP airport transfer service at Jeddah coastal terminal"
   },
   {
@@ -116,7 +116,7 @@ export const blogPosts = [
     date: "April 15, 2024",
     readTime: "4 min read",
     excerpt: "Identify the most reliable transportation modes for pilgrims traveling between the holy cities during Umrah.",
-    image: "/blogs/Best way to travel from Makkah to Madina.jpeg",
+    image: "/blogs/Best way to travel from Makkah to Madina.webp",
     alt: "Modern Islamic architecture and mosque featuring luxury transport access"
   },
   {
@@ -156,7 +156,7 @@ export const blogPosts = [
     date: "April 25, 2024",
     readTime: "5 min read",
     excerpt: "A dedicated guide for Umrah pilgrims seeking stress-free logistics and reliable mobility across the Kingdom.",
-    image: "/blogs/Transportation guide for umrah pilgrims.jpeg",
+    image: "/blogs/Transportation guide for umrah pilgrims.webp",
     alt: "Luxury pilgrim transport at the Makkah Haram mosque"
   },
   {
@@ -166,7 +166,7 @@ export const blogPosts = [
     date: "April 28, 2024",
     readTime: "4 min read",
     excerpt: "Plan your visit to Makkah and Madinah by understanding seasonal trends and religious peaks with our guide.",
-    image: "/blogs/best time to visit makkah and madina.jpeg",
+    image: "/blogs/best time to visit makkah and madina.webp",
     alt: "Luxury travel at Masjid an-Nabawi in Madinah during the best visiting hours"
   },
   {
@@ -176,7 +176,7 @@ export const blogPosts = [
     date: "May 02, 2024",
     readTime: "8 min read",
     excerpt: "Everything you need for the ultimate cross-border journey from Riyadh to the UAE with a private chauffeur.",
-    image: "/blogs/road trip guide from riyadh to dubai.jpeg",
+    image: "/blogs/road trip guide from riyadh to dubai.webp",
     alt: "VIP cross-border chauffeur service arriving at the Dubai skyline"
   },
   {
@@ -196,7 +196,7 @@ export const blogPosts = [
     date: "May 08, 2024",
     readTime: "6 min read",
     excerpt: "Explore the logistics and comfort levels of driving from Riyadh to Doha with a premium chauffeured car service.",
-    image: "/blogs/travel guide from riyadh to doha.jpeg",
+    image: "/blogs/travel guide from riyadh to doha.webp",
     alt: "VIP chauffeur arriving at the Doha skyline from Riyadh"
   },
   {
@@ -216,7 +216,7 @@ export const blogPosts = [
     date: "May 12, 2024",
     readTime: "4 min read",
     excerpt: "Specialized executive transportation solutions tailored for corporate travelers in Riyadh's business district.",
-    image: "/blogs/corporate chauffeur service in Riyadh.jpeg",
+    image: "/blogs/corporate chauffeur service in Riyadh.webp",
     alt: "Executive driver service in the corporate business district of Riyadh"
   },
   {
@@ -256,7 +256,7 @@ export const blogPosts = [
     date: "May 22, 2024",
     readTime: "5 min read",
     excerpt: "Essential travel advice for international visitors experiencing Makkah for the first time with elite support.",
-    image: "/blogs/travel tips for first time visitors.jpeg",
+    image: "/blogs/travel tips for first time visitors.webp",
     alt: "Panoramic luxury view of the Kaaba for first-time visitors"
   },
   {
@@ -266,7 +266,7 @@ export const blogPosts = [
     date: "May 25, 2024",
     readTime: "7 min read",
     excerpt: "How to integrate premium chauffeur services into a high-end Saudi Arabian travel itinerary for total comfort.",
-    image: "/blogs/luxury travel experience in saudia.jpeg",
+    image: "/blogs/luxury travel experience in saudia.webp",
     alt: "Crafting a luxury travel experience along a scenic Saudi road"
   },
   {
@@ -296,7 +296,7 @@ export const blogPosts = [
     date: "June 05, 2024",
     readTime: "7 min read",
     excerpt: "Strategic logistical tips for those traveling the expansive desert route from Riyadh to Madinah in luxury.",
-    image: "/blogs/travel guide from riyadh to madina.jpeg",
+    image: "/blogs/travel guide from riyadh to madina.webp",
     alt: "High-end chauffeur service at the beautiful Madinah umbrellas"
   }
 ];

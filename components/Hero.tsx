@@ -24,7 +24,7 @@ export default function Hero() {
           width: '100%',
           height: '120%',
           y: y1,
-          backgroundImage: 'url(/chauffeur-service-saudi-arabia-hero.png)',
+          backgroundImage: 'url(/chauffeur-service-saudi-arabia-hero.webp)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           zIndex: -2,

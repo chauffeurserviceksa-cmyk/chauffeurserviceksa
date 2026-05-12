@@ -8,7 +8,7 @@ const vehicles = [
   { name: 'Genesis G90', type: 'Luxury Sedan', image: '/Cars/Genesis G90.jpeg', pax: 3, luggage: 2, price: '500 SAR' },
   { name: 'Ford Taurus', type: 'Executive Sedan', image: '/Cars/Ford Taurus.jpeg', pax: 3, luggage: 2, price: '300 SAR' },
   { name: 'Cadillac Escalade', type: 'VIP SUV', image: '/Cars/cadillac-escalade-vip-chauffeur-saudi-arabia.jpeg', pax: 6, luggage: 5, price: '700 SAR' },
-  { name: 'GMC Yukon XL', type: 'Premium SUV', image: '/Cars/gmc-yukon-xl-private-driver-ksa.jpeg', pax: 6, luggage: 6, price: '500 SAR' },
+  { name: 'GMC Yukon XL', type: 'Premium SUV', image: '/Cars/gmc-yukon-xl-private-driver-ksa.webp', pax: 6, luggage: 6, price: '500 SAR' },
   { name: 'Mercedes V-Class', type: 'Executive Van', image: '/Cars/Mercedes Benz V Class.jpeg', pax: 7, luggage: 7, price: '550 SAR' },
   { name: 'Daihatsu Gran Max', type: 'Standard Van', image: '/Cars/Daihatsu Gran Max.jpeg', pax: 5, luggage: 4, price: '250 SAR' }
 ];
