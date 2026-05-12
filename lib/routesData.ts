@@ -86,6 +86,7 @@ export function slugify(text: string) {
 }
 
 export function parseSlug(slug: string) {
+  if (!slug) return null;
   const parts = slug.split('-to-');
   if (parts.length !== 2) return null;
   const from = parts[0].split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');

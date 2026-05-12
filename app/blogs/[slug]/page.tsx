@@ -121,23 +121,6 @@ export default async function BlogDetail({ params }: { params: Promise<{ slug: s
 
           </div>
           
-          <style jsx>{`
-            .blog-content-grid {
-              display: grid;
-              grid-template-columns: 1fr;
-              gap: 4rem;
-            }
-            @media (min-width: 1024px) {
-              .blog-content-grid {
-                grid-template-columns: minmax(0, 1.5fr) minmax(0, 0.8fr);
-              }
-              .blog-sidebar {
-                position: sticky;
-                top: 120px;
-                height: fit-content;
-              }
-            }
-          `}</style>
         </div>
       </article>
 
