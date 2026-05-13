@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { FloatingWhatsApp, SocialSidebar } from '@/components/FloatingButtons';
@@ -17,8 +18,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const blog = getBlogData(slug || '');
   const title = blog ? blog.title : unslugifyBlog(slug || '');
   return {
-    title: `${title} | Travel Guide KSA`,
-    description: `Read our comprehensive guide on ${title}. Discover expert tips, transportation options, and luxury chauffeur services with Chauffeur KSA.`
+    title: `${title.split(':')[0]} | KSA Chauffeur`,
+    description: `${title}. Tips & luxury chauffeur services in Saudi Arabia.`,
+    alternates: {
+      canonical: `https://chauffeurserviceksa.com/blogs/${slug}`,
+    },
   };
 }
 
@@ -32,6 +36,7 @@ export default async function BlogDetail({ params }: { params: Promise<{ slug: s
   }
 
   const title = blog.title;
+  const shortTitle = title.split(':')[0].trim();
 
   return (
     <main style={{ minHeight: '100vh', background: 'var(--color-black)' }}>
@@ -64,7 +69,7 @@ export default async function BlogDetail({ params }: { params: Promise<{ slug: s
           </div>
 
           <div style={{ height: '400px', borderRadius: '24px', marginBottom: '4rem', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.05)' }}>
-             <img src={blog.image} alt={blog.alt} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+             <Image src={blog.image} alt={blog.alt} width={1000} height={400} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
 
           <div className="blog-content-grid">
@@ -74,7 +79,7 @@ export default async function BlogDetail({ params }: { params: Promise<{ slug: s
                  Whether you are traveling for business, embarking on a holy pilgrimage for Umrah, or exploring the vast landscapes of Saudi Arabia as a tourist, having reliable transportation is critical to your experience. In this guide focusing on <strong>{title}</strong>, we cover everything you need to know to make your journey seamless.
                </p>
 
-               <h2 style={{ color: 'white', fontSize: '2rem', fontFamily: 'var(--font-playfair)', margin: '3rem 0 1.5rem' }}>Why Professional Ground Transportation Matters</h2>
+               <h2 style={{ color: 'white', fontSize: '2rem', fontFamily: 'var(--font-playfair)', margin: '3rem 0 1.5rem' }}>Why a Chauffeur Makes the Difference for {shortTitle}</h2>
                <p style={{ marginBottom: '1.5rem' }}>
                  Navigating unfamiliar routes, dealing with high traffic zones, and coordinating multiple flights can be exhausting. Choosing a professional chauffeur service instantly eliminates these logistical headaches. 
                </p>
@@ -90,7 +95,7 @@ export default async function BlogDetail({ params }: { params: Promise<{ slug: s
                  </p>
                </div>
 
-               <h2 style={{ color: 'white', fontSize: '2rem', fontFamily: 'var(--font-playfair)', margin: '3rem 0 1.5rem' }}>Booking Your Ride</h2>
+               <h2 style={{ color: 'white', fontSize: '2rem', fontFamily: 'var(--font-playfair)', margin: '3rem 0 1.5rem' }}>Book Your {shortTitle} Chauffeur Today</h2>
                <p style={{ marginBottom: '2rem' }}>
                  Ready to experience ultimate luxury and reliability? You can quickly reserve a vehicle that matches your exact requirements. Our support team operates 24/7 to accommodate last-minute changes and VIP requests. Let us handle the road so you can focus on your trip.
                </p>

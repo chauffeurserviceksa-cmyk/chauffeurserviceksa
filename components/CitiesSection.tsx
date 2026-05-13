@@ -1,4 +1,5 @@
 "use client";
+import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
@@ -37,16 +38,23 @@ export default function CitiesSection() {
                 transition={{ delay: i * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -10 }}
+                className="img-hover-parent"
                 style={{
                   position: 'relative',
                   aspectRatio: '4 / 5',
                   borderRadius: '24px',
-                  overflow: 'hidden',
                   cursor: 'pointer',
                   boxShadow: '0 10px 30px rgba(0,0,0,0.08)'
                 }}
               >
-                <img src={city.img} alt={city.alt} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.7s ease' }} onMouseOver={e => e.currentTarget.style.transform = 'scale(1.15)'} onMouseOut={e => e.currentTarget.style.transform = 'scale(1)'} />
+                <Image 
+                  src={city.img} 
+                  alt={city.alt} 
+                  width={400} 
+                  height={500} 
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                  className="img-hover-scale"
+                />
                 <div style={{
                   position: 'absolute',
                   top: 0, left: 0,

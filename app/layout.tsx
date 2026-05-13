@@ -16,8 +16,11 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Chauffeur Service in Saudi Arabia – Professional Private Drivers",
-  description: "Book a professional chauffeur or private driver anywhere in Saudi Arabia. We provide reliable airport transfers, corporate travel, and city-to-city rides with experienced drivers and comfortable vehicles. Available in Riyadh, Jeddah, Makkah, Madinah, and other major cities.",
+  title: "Chauffeur KSA | Private Drivers",
+  description: "Luxury chauffeur & private driver services in Saudi Arabia. Reliable airport transfers and intercity travel.",
+  alternates: {
+    canonical: 'https://chauffeurserviceksa.com',
+  },
 };
 
 export default function RootLayout({

@@ -6,16 +6,27 @@ import Footer from '@/components/Footer';
 import ContactForm from '@/components/ContactForm';
 import { motion } from 'framer-motion';
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const city = citiesData[params.slug.toLowerCase()];
+export async function generateStaticParams() {
+  return Object.keys(citiesData).map((slug) => ({
+    slug: slug,
+  }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const city = citiesData[slug.toLowerCase()];
   return {
     title: city ? `${city.title} | Luxury Chauffeur KSA` : 'City Chauffeur Service',
-    description: city ? city.intro : 'Premium private driver and chauffeur services in Saudi Arabia.'
+    description: city ? city.intro : 'Premium private driver and chauffeur services in Saudi Arabia.',
+    alternates: {
+      canonical: `https://chauffeurserviceksa.com/cities/${slug}`,
+    },
   };
 }
 
-export default function CityPage({ params }: { params: { slug: string } }) {
-  const city = citiesData[params.slug.toLowerCase()];
+export default async function CityPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const city = citiesData[slug.toLowerCase()];
 
   if (!city) {
     return <div>City not found</div>;

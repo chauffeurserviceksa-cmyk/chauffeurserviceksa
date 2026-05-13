@@ -1,9 +1,17 @@
-"use client";
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ContactForm from '@/components/ContactForm';
 import { Mail, Phone, MapPin, MessageCircle } from 'lucide-react';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Contact Us | Chauffeur Service KSA',
+  description: 'Get in touch with Chauffeur KSA. Book airport transfers, intercity rides, or corporate travel. Available 24/7 by phone, email, or WhatsApp.',
+  alternates: {
+    canonical: 'https://chauffeurserviceksa.com/contact',
+  },
+};
 
 export default function ContactPage() {
   return (
@@ -73,6 +81,33 @@ export default function ContactPage() {
           <div style={{ background: '#111', padding: '4rem', borderRadius: '24px', color: 'white', alignSelf: 'start' }}>
              <h3 style={{ fontSize: '1.8rem', marginBottom: '2.5rem', color: 'var(--color-gold)', textAlign: 'center' }}>Secure Online Booking</h3>
              <ContactForm />
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section style={{ padding: '8rem 0', background: '#fdfdfd' }}>
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
+            <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem', fontFamily: 'var(--font-heading)' }}>Frequently Asked Questions</h2>
+            <p style={{ color: '#666', maxWidth: '700px', margin: '0 auto' }}>Everything you need to know about our chauffeur services in Saudi Arabia.</p>
+          </div>
+          
+          <div style={{ maxWidth: '900px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '3rem' }}>
+            <div>
+              <h4 style={{ fontSize: '1.2rem', marginBottom: '1rem', color: '#111' }}>How do I book a chauffeur service?</h4>
+              <p style={{ color: '#666', lineHeight: '1.7', marginBottom: '2rem' }}>You can book through our online form above, call our support line, or send us a message on WhatsApp. We recommend booking at least 12 hours in advance for guaranteed availability, though we often accommodate last-minute requests.</p>
+              
+              <h4 style={{ fontSize: '1.2rem', marginBottom: '1rem', color: '#111' }}>What payment methods do you accept?</h4>
+              <p style={{ color: '#666', lineHeight: '1.7', marginBottom: '2rem' }}>We accept all major credit cards (Visa, Mastercard, AMEX), local Mada cards, and bank transfers. For corporate clients, we offer monthly invoicing and credit terms upon verification.</p>
+            </div>
+            <div>
+              <h4 style={{ fontSize: '1.2rem', marginBottom: '1rem', color: '#111' }}>Are your drivers English-speaking?</h4>
+              <p style={{ color: '#666', lineHeight: '1.7', marginBottom: '2rem' }}>Yes, we specialize in serving international clients. All our chauffeurs for executive and VIP services are fluent in English and trained in professional protocol to ensure a seamless communication experience.</p>
+              
+              <h4 style={{ fontSize: '1.2rem', marginBottom: '1rem', color: '#111' }}>What is your cancellation policy?</h4>
+              <p style={{ color: '#666', lineHeight: '1.7', marginBottom: '2rem' }}>We offer free cancellation up to 24 hours before your scheduled pickup time. For cancellations made within 24 hours, a small fee may apply. Please refer to your booking confirmation for specific terms.</p>
+            </div>
           </div>
         </div>
       </section>

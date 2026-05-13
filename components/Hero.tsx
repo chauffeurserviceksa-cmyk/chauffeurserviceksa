@@ -89,7 +89,8 @@ export default function Hero() {
             fontWeight: 700,
             letterSpacing: '-0.02em'
           }}>
-            Luxury Chauffeur Services in <br /> Saudi Arabia & <span style={{ color: 'var(--color-gold)' }}>Private Driver <br /> & Intercity Travel</span>
+            Premium Chauffeur & Private Driver in <br /> 
+            <span style={{ color: 'var(--color-gold)' }}>Saudi Arabia</span>
           </h1>
           <p style={{ 
             fontSize: '1.25rem', 

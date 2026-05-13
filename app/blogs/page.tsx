@@ -7,6 +7,7 @@ import { blogPosts, slugifyBlog } from '@/lib/blogData';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Clock, Calendar, ChevronRight, LayoutGrid, Search } from 'lucide-react';
+import Image from 'next/image';
 
 const CATEGORIES = [
   "All", 
@@ -129,8 +130,8 @@ export default function BlogsPage() {
                 href={`/blogs/${slugifyBlog(post.title)}`}
                 style={{ textDecoration: 'none', position: 'relative', overflow: 'hidden', borderRadius: '20px', height: '380px', display: 'flex', alignItems: 'flex-end', border: '1px solid rgba(255,255,255,0.1)' }}
               >
-                <div style={{ position: 'absolute', inset: 0, zIndex: 1 }}>
-                  <img src={post.image} alt={post.alt} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <div className="img-hover-parent" style={{ position: 'absolute', inset: 0, zIndex: 1 }}>
+                  <Image src={post.image} alt={post.alt} width={800} height={450} style={{ width: '100%', height: '100%', objectFit: 'cover' }} className="img-hover-scale" />
                   <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 60%, transparent 100%)' }} />
                 </div>
                 <div style={{ position: 'relative', zIndex: 2, padding: '2rem', width: '100%' }}>
@@ -231,12 +232,14 @@ export default function BlogsPage() {
                     href={`/blogs/${slugifyBlog(post.title)}`}
                     style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column', height: '100%' }}
                   >
-                    <div style={{ aspectRatio: '16/9', overflow: 'hidden', borderRadius: '16px', marginBottom: '1.5rem', border: '1px solid rgba(255,255,255,0.05)', position: 'relative' }}>
-                      <img 
+                    <div className="img-hover-parent" style={{ aspectRatio: '16/9', borderRadius: '16px', marginBottom: '1.5rem', border: '1px solid rgba(255,255,255,0.05)', position: 'relative' }}>
+                      <Image 
                         src={post.image} 
                         alt={post.alt} 
-                        className="blog-img"
-                        style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)' }} 
+                        width={800}
+                        height={450}
+                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                        className="img-hover-scale"
                       />
                       <div style={{ position: 'absolute', top: '1rem', right: '1rem', padding: '0.4rem 0.8rem', background: 'rgba(0,0,0,0.7)', backdropFilter: 'blur(10px)', borderRadius: '4px', fontSize: '0.65rem', color: 'var(--color-gold)', fontWeight: 700, border: '1px solid rgba(201,162,39,0.3)' }}>
                         {post.category.toUpperCase()}
@@ -248,7 +251,7 @@ export default function BlogsPage() {
                          <span>•</span>
                          <span>{post.readTime}</span>
                       </div>
-                      <h3 style={{ color: 'white', fontSize: '1.4rem', fontFamily: 'var(--font-playfair)', marginBottom: '0.8rem', lineHeight: '1.3' }}>{post.title}</h3>
+                      <h2 style={{ color: 'white', fontSize: '1.4rem', fontFamily: 'var(--font-playfair)', marginBottom: '0.8rem', lineHeight: '1.3' }}>{post.title}</h2>
                       <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '1.5rem' }}>{post.excerpt}</p>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'rgba(255,255,255,0.3)', fontSize: '0.75rem', marginBottom: '1.5rem' }}>
                         Expert Insights by {post.author}

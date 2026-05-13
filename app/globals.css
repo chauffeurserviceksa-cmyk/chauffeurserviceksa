@@ -146,3 +146,16 @@ button {
     height: fit-content;
   }
 }
+
+/* Image Optimization Utilities */
+.img-hover-parent {
+  overflow: hidden;
+}
+
+.img-hover-scale {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.img-hover-parent:hover .img-hover-scale {
+  transform: scale(1.1) !important;
+}

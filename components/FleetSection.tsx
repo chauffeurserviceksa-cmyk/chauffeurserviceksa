@@ -1,5 +1,5 @@
 "use client";
-import React from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const vehicles = [
@@ -39,8 +39,8 @@ export default function FleetSection() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
+              className="img-hover-parent"
               style={{ 
-                overflow: 'hidden', 
                 borderRadius: '16px', 
                 background: '#1a1a1a',
                 border: '1px solid rgba(255,255,255,0.05)',
@@ -48,8 +48,8 @@ export default function FleetSection() {
               }}
               whileHover={{ y: -10, borderColor: 'rgba(201,162,39,0.5)' }}
             >
-              <div style={{ position: 'relative', height: '240px', overflow: 'hidden' }}>
-                <img src={v.image} alt={v.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <div style={{ position: 'relative', height: '240px' }}>
+                <Image src={v.image} alt={v.name} width={800} height={240} style={{ width: '100%', height: '100%', objectFit: 'cover' }} className="img-hover-scale" />
                 <div style={{ 
                   position: 'absolute', 
                   top: '1rem', 

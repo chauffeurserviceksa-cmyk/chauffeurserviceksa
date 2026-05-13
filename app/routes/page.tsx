@@ -6,7 +6,10 @@ import Link from 'next/link';
 
 export const metadata = {
   title: "City to City Routes | Chauffeur Service KSA",
-  description: "Explore all our long-distance intercity chauffeur and private driver routes across Saudi Arabia and the GCC."
+  description: "Explore all our long-distance intercity chauffeur and private driver routes across Saudi Arabia and the GCC.",
+  alternates: {
+    canonical: 'https://chauffeurserviceksa.com/routes',
+  },
 };
 
 export default function RoutesPage() {
