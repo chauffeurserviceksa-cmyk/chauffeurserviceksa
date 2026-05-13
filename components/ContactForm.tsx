@@ -37,7 +37,7 @@ export default function ContactForm() {
         backdropFilter: 'blur(20px)'
       }}
     >
-      <h3 style={{ 
+      <h2 style={{ 
         fontFamily: 'var(--font-heading)', 
         color: 'var(--color-gold)', 
         marginBottom: '0.8rem', 
@@ -45,7 +45,7 @@ export default function ContactForm() {
         fontWeight: 600
       }}>
         Book Your Chauffeur
-      </h3>
+      </h2>
       <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem', marginBottom: '1.5rem' }}>Experience the ultimate private driver experience.</p>
       
       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>

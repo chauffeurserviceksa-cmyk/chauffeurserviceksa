@@ -5,8 +5,8 @@ import { routeCategories, slugify } from '@/lib/routesData';
 import Link from 'next/link';
 
 export const metadata = {
-  title: "City to City Routes | Chauffeur Service KSA",
-  description: "Explore all our long-distance intercity chauffeur and private driver routes across Saudi Arabia and the GCC.",
+  title: "Luxury Intercity Chauffeur & Private Driver Routes | Chauffeur KSA",
+  description: "Explore all our luxury city-to-city transfers, VIP Hajj & Umrah logistics, and International GCC chauffeur routes across Saudi Arabia.",
   alternates: {
     canonical: 'https://chauffeurserviceksa.com/routes',
   },

@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const city = citiesData[slug.toLowerCase()];
   return {
     title: city ? `${city.title} | Luxury Chauffeur KSA` : 'City Chauffeur Service',
-    description: city ? city.intro : 'Premium private driver and chauffeur services in Saudi Arabia.',
+    description: city ? city.metaDescription : 'Premium private driver and chauffeur services in Saudi Arabia.',
     alternates: {
       canonical: `https://chauffeurserviceksa.com/cities/${slug}`,
     },
@@ -68,7 +68,7 @@ export default async function CityPage({ params }: { params: Promise<{ slug: str
           </div>
           
           <div style={{ background: '#111', padding: '3rem', borderRadius: '24px', color: 'white' }}>
-            <h3 style={{ fontSize: '1.8rem', marginBottom: '2rem', color: 'var(--color-gold)' }}>Get a Quote for {city.name}</h3>
+            <h2 style={{ fontSize: '1.8rem', marginBottom: '2rem', color: 'var(--color-gold)', fontFamily: 'var(--font-heading)' }}>Get a Quote for {city.name}</h2>
             <ContactForm />
           </div>
         </div>
@@ -99,6 +99,35 @@ export default async function CityPage({ params }: { params: Promise<{ slug: str
                 </div>
               </div>
            </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section style={{ padding: '8rem 0', background: '#111', color: 'white' }}>
+        <div className="container">
+          <h2 style={{ fontSize: '2.5rem', textAlign: 'center', marginBottom: '4rem', fontFamily: 'var(--font-heading)' }}>
+            Why Choose Our {city.name} Chauffeur Service?
+          </h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '3rem' }}>
+            <div style={{ background: 'rgba(255,255,255,0.03)', padding: '2.5rem', borderRadius: '16px', border: '1px solid rgba(255,255,255,0.05)' }}>
+              <h4 style={{ color: 'var(--color-gold)', fontSize: '1.4rem', marginBottom: '1.2rem' }}>Professional Chauffeurs</h4>
+              <p style={{ color: 'rgba(255,255,255,0.7)', lineHeight: '1.8', fontSize: '1.05rem' }}>
+                Our drivers in {city.name} are meticulously vetted and trained in the highest standards of VIP hospitality. They prioritize your safety, privacy, and comfort above all else, ensuring a dignified travel experience every time.
+              </p>
+            </div>
+            <div style={{ background: 'rgba(255,255,255,0.03)', padding: '2.5rem', borderRadius: '16px', border: '1px solid rgba(255,255,255,0.05)' }}>
+              <h4 style={{ color: 'var(--color-gold)', fontSize: '1.4rem', marginBottom: '1.2rem' }}>Punctuality & Reliability</h4>
+              <p style={{ color: 'rgba(255,255,255,0.7)', lineHeight: '1.8', fontSize: '1.05rem' }}>
+                Time is your most valuable asset. Whether it's an early morning airport transfer or a tight schedule of business meetings across {city.name}, our chauffeurs use advanced real-time traffic monitoring to guarantee on-time arrivals.
+              </p>
+            </div>
+            <div style={{ background: 'rgba(255,255,255,0.03)', padding: '2.5rem', borderRadius: '16px', border: '1px solid rgba(255,255,255,0.05)' }}>
+              <h4 style={{ color: 'var(--color-gold)', fontSize: '1.4rem', marginBottom: '1.2rem' }}>Impeccable Luxury Fleet</h4>
+              <p style={{ color: 'rgba(255,255,255,0.7)', lineHeight: '1.8', fontSize: '1.05rem' }}>
+                Travel in style with our selection of world-class vehicles. Every car in our {city.name} fleet undergoes rigorous daily inspections and deep cleaning, ensuring a pristine, climate-controlled environment for your journey.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

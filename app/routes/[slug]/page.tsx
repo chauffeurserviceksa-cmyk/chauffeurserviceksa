@@ -21,9 +21,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const routeData = parseSlug(slug);
   if (!routeData) return { title: 'Route Not Found | Chauffeur KSA' };
+
+  // Expand abbreviations for titles if they exist
+  const fromName = routeData.from === 'Jed' ? 'JED Airport' : routeData.from === 'Dmm' ? 'DMM Airport' : routeData.from === 'Ruh' ? 'RUH Airport' : routeData.from;
+  const toName = routeData.to === 'Jed' ? 'JED Airport' : routeData.to === 'Dmm' ? 'DMM Airport' : routeData.to === 'Ruh' ? 'RUH Airport' : routeData.to;
+
   return {
-    title: `${routeData.from} to ${routeData.to} | Chauffeur KSA`,
-    description: `Book a luxury chauffeur and private driver from ${routeData.from} to ${routeData.to}. Premium vehicles, professional service, and reliable transfers.`,
+    title: `Luxury Chauffeur ${fromName} to ${toName} | Private Driver & VIP Transfer KSA`,
+    description: `Book a luxury chauffeur and private driver from ${routeData.from} to ${routeData.to}. Premium vehicles, professional service, and reliable transfers in Saudi Arabia.`,
     alternates: {
       canonical: `https://chauffeurserviceksa.com/routes/${slug}`,
     },
@@ -66,13 +71,14 @@ export default async function RouteDetail({ params }: { params: Promise<{ slug: 
                 Travel from {routeData.from} to {routeData.to} in comfort. Our drivers are on time, every time. Sit back and enjoy the ride.
               </p>
 
-              <div style={{ display: 'flex', gap: '2rem' }}>
+               <h2 style={{ color: 'white', fontSize: '1.8rem', marginBottom: '1.5rem', fontFamily: 'var(--font-playfair)' }}>Route Highlights</h2>
+               <div style={{ display: 'flex', gap: '2rem' }}>
                  <div style={{ background: 'rgba(255,255,255,0.03)', padding: '1.5rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)', flex: 1 }}>
-                    <h2 style={{ color: 'white', fontSize: '1.2rem', marginBottom: '0.5rem' }}>Door-to-Door Service</h2>
+                    <h3 style={{ color: 'white', fontSize: '1.2rem', marginBottom: '0.5rem' }}>{routeData.from} to {routeData.to} Door-to-Door Service</h3>
                     <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.95rem', lineHeight: '1.6' }}>We pick you up from {routeData.from} and drop you off at {routeData.to}. No stops, no hassle.</p>
                  </div>
                  <div style={{ background: 'rgba(255,255,255,0.03)', padding: '1.5rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)', flex: 1 }}>
-                    <h2 style={{ color: 'white', fontSize: '1.2rem', marginBottom: '0.5rem' }}>Premium Amenities</h2>
+                    <h3 style={{ color: 'white', fontSize: '1.2rem', marginBottom: '0.5rem' }}>Premium Amenities for Your {routeData.from} Trip</h3>
                     <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.95rem', lineHeight: '1.6' }}>Enjoy Wi-Fi, drinks, and wide leather seats on every trip.</p>
                  </div>
               </div>
