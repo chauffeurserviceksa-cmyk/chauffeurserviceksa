@@ -6,6 +6,7 @@ import ContactForm from '@/components/ContactForm';
 import { blogPosts, slugifyBlog, getBlogData, unslugifyBlog } from '@/lib/blogData';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Script from 'next/script';
 
 export async function generateStaticParams() {
   return blogPosts.map(blog => ({
@@ -38,8 +39,62 @@ export default async function BlogDetail({ params }: { params: Promise<{ slug: s
   const title = blog.title;
   const shortTitle = title.split(':')[0].trim();
 
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": blog.title,
+      "image": `https://chauffeurserviceksa.com${blog.image}`,
+      "author": {
+        "@type": "Person",
+        "name": blog.author
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Chauffeur KSA",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://chauffeurserviceksa.com/logo.png"
+        }
+      },
+      "datePublished": "2024-03-15", // Defaulting to March 2024 as per data
+      "dateModified": new Date().toISOString().split('T')[0],
+      "description": blog.excerpt,
+      "articleSection": blog.category
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://chauffeurserviceksa.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogs",
+          "item": "https://chauffeurserviceksa.com/blogs"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": blog.title,
+          "item": `https://chauffeurserviceksa.com/blogs/${slug}`
+        }
+      ]
+    }
+  ];
+
   return (
     <main style={{ minHeight: '100vh', background: 'var(--color-black)' }}>
+      <Script
+        id={`structured-data-blog-${slug}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       <SocialSidebar />
       <FloatingWhatsApp />

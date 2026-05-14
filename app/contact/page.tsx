@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import ContactForm from '@/components/ContactForm';
 import { Mail, Phone, MapPin, MessageCircle } from 'lucide-react';
 import type { Metadata } from 'next';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: 'Contact Us | Chauffeur Service KSA',
@@ -14,8 +15,60 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Chauffeur KSA",
+    "image": "https://chauffeurserviceksa.com/hero-bg.jpg",
+    "telephone": "+966501234567",
+    "email": "bookings@chauffeurservice.sa",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "King Fahd Road, Olaya District",
+      "addressLocality": "Riyadh",
+      "addressRegion": "Riyadh",
+      "postalCode": "12211",
+      "addressCountry": "SA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 24.7136,
+      "longitude": 46.6753
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "serviceArea": {
+      "@type": "Country",
+      "name": "SA"
+    },
+    "areaServed": ["Riyadh", "Jeddah", "Makkah", "Madinah", "Dammam", "Saudi Arabia"],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+966501234567",
+      "contactType": "WhatsApp",
+      "availableLanguage": ["English", "Arabic"]
+    }
+  };
+
   return (
     <main className="min-h-screen bg-white">
+      <Script
+        id="structured-data-contact"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       
       {/* Hero Section */}

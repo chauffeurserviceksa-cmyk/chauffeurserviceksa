@@ -5,6 +5,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ContactForm from '@/components/ContactForm';
 import { motion } from 'framer-motion';
+import Script from 'next/script';
 
 export async function generateStaticParams() {
   return Object.keys(citiesData).map((slug) => ({
@@ -32,8 +33,59 @@ export default async function CityPage({ params }: { params: Promise<{ slug: str
     return <div>City not found</div>;
   }
 
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Chauffeur Service",
+      "name": `Luxury Chauffeur & Private Driver in ${city.name}`,
+      "description": `Premium private driver and chauffeur services in ${city.name}, Saudi Arabia. Elite fleet for airport transfers and city travel.`,
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Chauffeur KSA"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": city.name
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": `https://chauffeurserviceksa.com/cities/${slug}`
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://chauffeurserviceksa.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Cities",
+          "item": "https://chauffeurserviceksa.com/#cities"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": city.name,
+          "item": `https://chauffeurserviceksa.com/cities/${slug}`
+        }
+      ]
+    }
+  ];
+
   return (
     <main className="min-h-screen bg-white">
+      <Script
+        id={`structured-data-city-${slug}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       
       {/* Hero Section */}

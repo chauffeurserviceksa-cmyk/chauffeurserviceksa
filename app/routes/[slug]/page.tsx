@@ -4,6 +4,7 @@ import { FloatingWhatsApp, SocialSidebar } from '@/components/FloatingButtons';
 import ContactForm from '@/components/ContactForm';
 import { parseSlug, slugify, routeCategories } from '@/lib/routesData';
 import { notFound } from 'next/navigation';
+import Script from 'next/script';
 
 export async function generateStaticParams() {
   const allParams: { slug: string }[] = [];
@@ -43,8 +44,98 @@ export default async function RouteDetail({ params }: { params: Promise<{ slug: 
     notFound();
   }
 
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Trip",
+      "name": `${routeData.from} to ${routeData.to} Luxury Chauffeur Service`,
+      "description": `Premium private chauffeur and luxury transfer from ${routeData.from} to ${routeData.to}. Professional drivers and elite vehicles.`,
+      "itinerary": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "Place",
+              "name": routeData.from
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "Place",
+              "name": routeData.to
+            }
+          }
+        ]
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Chauffeur KSA",
+        "url": "https://chauffeurserviceksa.com"
+      },
+      "transportationMode": "Chauffeur Driven Car",
+      "estimatedTravelTime": "PT4H"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://chauffeurserviceksa.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Routes",
+          "item": "https://chauffeurserviceksa.com/routes"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": `${routeData.from} to ${routeData.to}`,
+          "item": `https://chauffeurserviceksa.com/routes/${slug}`
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Chauffeur Service",
+      "name": `Luxury Transfer from ${routeData.from} to ${routeData.to}`,
+      "description": `High-end private driver service for the route ${routeData.from} to ${routeData.to} in Saudi Arabia.`,
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Chauffeur KSA"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Saudi Arabia"
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": `https://chauffeurserviceksa.com/routes/${slug}`
+      },
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "areaServed": [routeData.from, routeData.to]
+      }
+    }
+  ];
+
   return (
     <main style={{ minHeight: '100vh', background: 'var(--color-black)' }}>
+      <Script
+        id={`structured-data-route-${slug}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       <SocialSidebar />
       <FloatingWhatsApp />
