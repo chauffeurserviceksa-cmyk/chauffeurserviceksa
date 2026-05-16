@@ -21,6 +21,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://chauffeurserviceksa.com',
   },
+  verification: {
+    google: "dVFvgm7T3nA_Vtxpw31BnKlggjctvFUsUUgd1TAfg6c",
+  },
 };
 
 export default function RootLayout({
