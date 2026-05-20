@@ -1,5 +1,55 @@
 export const blogPosts = [
   {
+    title: "What is the Best Private Driver Option for Elderly Pilgrims Performing Umrah?",
+    category: "Pilgrimage Travel Guides",
+    author: "Chauffeur KSA Travel Team",
+    date: "May 20, 2026",
+    readTime: "5 min read",
+    excerpt: "Discover the most reliable, comfortable, and safe private driver options for elderly pilgrims performing Umrah. Learn why premium SUVs and specialized meet-and-greet services are essential.",
+    image: "/blogs/complete travel guide to Makkah.webp",
+    alt: "Luxury private driver assisting an elderly pilgrim in Makkah"
+  },
+  {
+    title: "A Complete Guide to Luxury Ziyarat Tours in Madinah: Historic Sites in Comfort",
+    category: "Pilgrimage Travel Guides",
+    author: "Chauffeur KSA Travel Team",
+    date: "May 19, 2026",
+    readTime: "6 min read",
+    excerpt: "Explore the sacred historical sites of Madinah in total comfort. Our guide covers luxury Ziyarat tours, visiting Quba, Uhud, and historical mosques in premium vehicles.",
+    image: "/blogs/complete travel guide to Madina.webp",
+    alt: "Premium chauffeur vehicle parked near a beautiful historic mosque in Madinah"
+  },
+  {
+    title: "How to Plan a VIP Umrah: Elite Ground Transport and Haram Proximity Logistics",
+    category: "Pilgrimage Travel Guides",
+    author: "Chauffeur KSA Travel Team",
+    date: "May 18, 2026",
+    readTime: "5 min read",
+    excerpt: "Plan a premium, stress-free spiritual pilgrimage. Discover how VIP airport transfers, luxury fleets, and smart hotel proximity drops elevate your Umrah experience.",
+    image: "/blogs/vip-umrah-planning-logistics.webp",
+    alt: "VIP private driver service at the entrance of a luxury hotel in Makkah near Masjid al-Haram"
+  },
+  {
+    title: "Umrah with Family: Why Booking a Private GMC Yukon XL Solves Travel Stress",
+    category: "Pilgrimage Travel Guides",
+    author: "Chauffeur KSA Travel Team",
+    date: "May 17, 2026",
+    readTime: "5 min read",
+    excerpt: "Traveling for Umrah with family requires careful coordination. Learn why booking a spacious GMC Yukon XL provides the ultimate comfort, luggage space, and peace of mind.",
+    image: "/blogs/best transport options for umrah.jpeg",
+    alt: "Spacious luxury GMC Yukon XL driving on a highway between Jeddah and Makkah"
+  },
+  {
+    title: "How to Navigate the Makkah Haram Boundaries: Chauffeur Drop-off Points Explained",
+    category: "Pilgrimage Travel Guides",
+    author: "Chauffeur KSA Travel Team",
+    date: "May 16, 2026",
+    readTime: "6 min read",
+    excerpt: "Understanding the complex traffic rules and boundaries around Masjid al-Haram. Find the best VIP chauffeur drop-off and pickup locations for a seamless prayer commute.",
+    image: "/blogs/best transportation options in makkah.jpeg",
+    alt: "Premium chauffeur vehicle navigating near the dynamic traffic of the Grand Mosque in Makkah"
+  },
+  {
     title: "Makkah Travel Guide: Essential Tips for Luxury & Spiritual Pilgrims",
     category: "Pilgrimage Travel Guides",
     author: "Chauffeur KSA Travel Team",

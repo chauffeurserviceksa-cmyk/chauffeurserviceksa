@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import { FloatingWhatsApp, SocialSidebar } from '@/components/FloatingButtons';
 import ContactForm from '@/components/ContactForm';
 import { blogPosts, slugifyBlog, getBlogData, unslugifyBlog } from '@/lib/blogData';
+import { blogContents } from '@/lib/blogContent';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -39,6 +40,25 @@ export default async function BlogDetail({ params }: { params: Promise<{ slug: s
   const title = blog.title;
   const shortTitle = title.split(':')[0].trim();
 
+  // Find related articles for dynamic interlinking and Topical Cluster support
+  let relatedPosts = blogPosts.filter(post => post.category === blog.category && post.title !== blog.title);
+  if (relatedPosts.length < 3) {
+    const extraPosts = blogPosts.filter(post => post.title !== blog.title && !relatedPosts.some(r => r.title === post.title));
+    relatedPosts = [...relatedPosts, ...extraPosts].slice(0, 3);
+  } else {
+    relatedPosts = relatedPosts.slice(0, 3);
+  }
+
+  // Parse date safely for schema markup
+  let publishedDate = "2024-03-15";
+  try {
+    if (blog.date) {
+      publishedDate = new Date(blog.date).toISOString().split('T')[0];
+    }
+  } catch (e) {
+    // Keep fallback
+  }
+
   const jsonLd = [
     {
       "@context": "https://schema.org",
@@ -57,7 +77,7 @@ export default async function BlogDetail({ params }: { params: Promise<{ slug: s
           "url": "https://chauffeurserviceksa.com/logo.png"
         }
       },
-      "datePublished": "2024-03-15", // Defaulting to March 2024 as per data
+      "datePublished": publishedDate,
       "dateModified": new Date().toISOString().split('T')[0],
       "description": blog.excerpt,
       "articleSection": blog.category
@@ -88,6 +108,9 @@ export default async function BlogDetail({ params }: { params: Promise<{ slug: s
     }
   ];
 
+  // Retrieve custom rich HTML content or fallback to dynamic generic template
+  const customHtml = blogContents[slug];
+
   return (
     <main style={{ minHeight: '100vh', background: 'var(--color-black)' }}>
       <Script
@@ -115,45 +138,51 @@ export default async function BlogDetail({ params }: { params: Promise<{ slug: s
              </h1>
              
              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1rem', color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem' }}>
-               <span>By {blog.author}</span>
-               <span>•</span>
-               <span>Published: {blog.date}</span>
-               <span>•</span>
-               <span>{blog.readTime}</span>
-             </div>
+                <span>By {blog.author}</span>
+                <span>•</span>
+                <span>Published: {blog.date}</span>
+                <span>•</span>
+                <span>{blog.readTime}</span>
+              </div>
           </div>
 
-          <div style={{ height: '400px', borderRadius: '24px', marginBottom: '4rem', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.05)' }}>
-             <Image src={blog.image} alt={blog.alt} width={1000} height={400} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          <div style={{ height: '450px', borderRadius: '24px', marginBottom: '4rem', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.05)', position: 'relative' }}>
+             <Image src={blog.image} alt={blog.alt} fill style={{ objectFit: 'cover' }} priority />
           </div>
 
           <div className="blog-content-grid">
             
             <div style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.15rem', lineHeight: '1.9' }}>
-               <p style={{ marginBottom: '2rem' }}>
-                 Whether you are traveling for business, embarking on a holy pilgrimage for Umrah, or exploring the vast landscapes of Saudi Arabia as a tourist, having reliable transportation is critical to your experience. In this guide focusing on <strong>{title}</strong>, we cover everything you need to know to make your journey seamless.
-               </p>
+               {customHtml ? (
+                 <div dangerouslySetInnerHTML={{ __html: customHtml }} />
+               ) : (
+                 <>
+                   <p style={{ marginBottom: '2rem' }}>
+                     Whether you are traveling for business, embarking on a holy pilgrimage for Umrah, or exploring the vast landscapes of Saudi Arabia as a tourist, having reliable transportation is critical to your experience. In this guide focusing on <strong>{title}</strong>, we cover everything you need to know to make your journey seamless.
+                   </p>
 
-               <h2 style={{ color: 'white', fontSize: '2rem', fontFamily: 'var(--font-playfair)', margin: '3rem 0 1.5rem' }}>Why a Chauffeur Makes the Difference for {shortTitle}</h2>
-               <p style={{ marginBottom: '1.5rem' }}>
-                 Navigating unfamiliar routes, dealing with high traffic zones, and coordinating multiple flights can be exhausting. Choosing a professional chauffeur service instantly eliminates these logistical headaches. 
-               </p>
-               <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                  <li><strong>Safety & Comfort:</strong> High-end vehicles (like the Mercedes S-Class or GMC Yukon) ensure you travel in absolute comfort.</li>
-                  <li><strong>Punctuality:</strong> Chauffeurs track your exact schedule and flights to avoid any waiting time.</li>
-                  <li><strong>Local Expertise:</strong> Drivers are intimately familiar with local routes, VIP protocols, and religious access zones in Makkah and Madinah.</li>
-               </ul>
+                   <h2 style={{ color: 'white', fontSize: '2rem', fontFamily: 'var(--font-playfair)', margin: '3rem 0 1.5rem' }}>Why a Chauffeur Makes the Difference for {shortTitle}</h2>
+                   <p style={{ marginBottom: '1.5rem' }}>
+                     Navigating unfamiliar routes, dealing with high traffic zones, and coordinating multiple flights can be exhausting. Choosing a professional chauffeur service instantly eliminates these logistical headaches. 
+                   </p>
+                   <ul style={{ paddingLeft: '1.5rem', marginBottom: '2rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                      <li><strong>Safety & Comfort:</strong> High-end vehicles (like the Mercedes S-Class or GMC Yukon) ensure you travel in absolute comfort.</li>
+                      <li><strong>Punctuality:</strong> Chauffeurs track your exact schedule and flights to avoid any waiting time.</li>
+                      <li><strong>Local Expertise:</strong> Drivers are intimately familiar with local routes, VIP protocols, and religious access zones in Makkah and Madinah.</li>
+                   </ul>
 
-               <div style={{ background: 'rgba(201,162,39,0.05)', borderLeft: '4px solid var(--color-gold)', padding: '2rem', marginBottom: '3rem', borderRadius: '0 12px 12px 0' }}>
-                 <p style={{ margin: 0, fontStyle: 'italic', color: 'white', fontSize: '1.25rem', fontFamily: 'var(--font-playfair)' }}>
-                   "Traveling is not just about reaching the destination; it is about the peace of mind during the journey."
-                 </p>
-               </div>
+                   <div style={{ background: 'rgba(201,162,39,0.05)', borderLeft: '4px solid var(--color-gold)', padding: '2rem', marginBottom: '3rem', borderRadius: '0 12px 12px 0' }}>
+                     <p style={{ margin: 0, fontStyle: 'italic', color: 'white', fontSize: '1.25rem', fontFamily: 'var(--font-playfair)' }}>
+                       "Traveling is not just about reaching the destination; it is about the peace of mind during the journey."
+                     </p>
+                   </div>
 
-               <h2 style={{ color: 'white', fontSize: '2rem', fontFamily: 'var(--font-playfair)', margin: '3rem 0 1.5rem' }}>Book Your {shortTitle} Chauffeur Today</h2>
-               <p style={{ marginBottom: '2rem' }}>
-                 Ready to experience ultimate luxury and reliability? You can quickly reserve a vehicle that matches your exact requirements. Our support team operates 24/7 to accommodate last-minute changes and VIP requests. Let us handle the road so you can focus on your trip.
-               </p>
+                   <h2 style={{ color: 'white', fontSize: '2rem', fontFamily: 'var(--font-playfair)', margin: '3rem 0 1.5rem' }}>Book Your {shortTitle} Chauffeur Today</h2>
+                   <p style={{ marginBottom: '2rem' }}>
+                     Ready to experience ultimate luxury and reliability? You can quickly reserve a vehicle that matches your exact requirements. Our support team operates 24/7 to accommodate last-minute changes and VIP requests. Let us handle the road so you can focus on your trip.
+                   </p>
+                 </>
+               )}
             </div>
 
             <aside className="blog-sidebar">
@@ -163,7 +192,7 @@ export default async function BlogDetail({ params }: { params: Promise<{ slug: s
                  <ContactForm />
                </div>
 
-               {blog.category === "Route Guides" && (
+               {(blog.category === "Intercity Route Guides" || blog.category === "Route Guides") && (
                  <div style={{ background: 'linear-gradient(135deg, rgba(201,162,39,0.1), transparent)', padding: '2rem', borderRadius: '16px', border: '1px solid rgba(201,162,39,0.2)', marginBottom: '2rem' }}>
                    <h3 style={{ color: 'white', fontFamily: 'var(--font-playfair)', fontSize: '1.3rem', marginBottom: '0.8rem' }}>Intercity Services</h3>
                    <p style={{ color: 'rgba(255,255,255,0.6)', marginBottom: '1.2rem', fontSize: '0.9rem', lineHeight: '1.5' }}>Explore our full directory of city-to-city chauffeur routes across the Kingdom and GCC.</p>
@@ -180,11 +209,50 @@ export default async function BlogDetail({ params }: { params: Promise<{ slug: s
             </aside>
 
           </div>
+
+          {/* Related Articles Section (Topical Cluster) */}
+          <div style={{ marginTop: '6rem', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '4rem' }}>
+             <h3 style={{ color: 'white', fontFamily: 'var(--font-playfair)', fontSize: '2.2rem', marginBottom: '2.5rem' }}>Related Luxury Travel Guides</h3>
+             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
+                {relatedPosts.map((relatedBlog, idx) => (
+                  <Link 
+                    key={idx} 
+                    href={`/blogs/${slugifyBlog(relatedBlog.title)}`}
+                    style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column', height: '100%', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '16px', overflow: 'hidden', transition: 'all 0.3s ease' }}
+                    className="related-blog-card"
+                  >
+                    <div style={{ aspectRatio: '16/9', position: 'relative', overflow: 'hidden' }}>
+                      <Image src={relatedBlog.image} alt={relatedBlog.alt} fill style={{ objectFit: 'cover' }} />
+                    </div>
+                    <div style={{ padding: '1.5rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                       <span style={{ color: 'var(--color-gold)', fontSize: '0.7rem', fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.5rem', display: 'block' }}>{relatedBlog.category}</span>
+                       <h4 style={{ color: 'white', fontSize: '1.15rem', fontFamily: 'var(--font-playfair)', marginBottom: '0.8rem', lineHeight: '1.3', flex: 1 }}>{relatedBlog.title}</h4>
+                       <div style={{ display: 'flex', gap: '0.8rem', color: 'rgba(255,255,255,0.4)', fontSize: '0.7rem', marginTop: '1rem' }}>
+                         <span>{relatedBlog.date}</span>
+                         <span>•</span>
+                         <span>{relatedBlog.readTime}</span>
+                       </div>
+                    </div>
+                  </Link>
+                ))}
+             </div>
+          </div>
           
         </div>
       </article>
 
       <Footer />
+      
+      <style dangerouslySetInnerHTML={{ __html: `
+        .related-blog-card {
+          transition: all 0.3s ease !important;
+        }
+        .related-blog-card:hover {
+          transform: translateY(-5px) !important;
+          border-color: rgba(201,162,39,0.3) !important;
+          background: rgba(255,255,255,0.04) !important;
+        }
+      ` }} />
     </main>
   );
 }
