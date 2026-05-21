@@ -1,5 +1,55 @@
 export const blogPosts = [
   {
+    title: "Madinah to Makkah Pilgrim Transport: Mercedes V-Class vs. Haramain High-Speed Train",
+    category: "Pilgrimage Travel Guides",
+    author: "Chauffeur KSA Travel Team",
+    date: "May 25, 2026",
+    readTime: "6 min read",
+    excerpt: "Compare the travel experience between Madinah and Makkah. Discover why a private Mercedes V-Class chauffeur service offers superior convenience, family comfort, and door-to-door luxury compared to the Haramain High-Speed Train.",
+    image: "/blogs/Best way to travel from Makkah to Madina.webp",
+    alt: "Premium Mercedes V-Class parked near historic Madinah scenery"
+  },
+  {
+    title: "What Are the Miqat Points for Umrah Pilgrims Arriving via Jeddah (JED) Airport?",
+    category: "Pilgrimage Travel Guides",
+    author: "Chauffeur KSA Travel Team",
+    date: "May 24, 2026",
+    readTime: "5 min read",
+    excerpt: "Learn how to manage your Miqat intentions and Ihram state when arriving through Jeddah (JED) Airport. Explore the rules for Juhfah, Qarn al-Manazil, and why a private chauffeur transfer simplifies the journey.",
+    image: "/blogs/airport transfer guide in Jeddah.webp",
+    alt: "Pilgrims ready for Umrah inside a luxury chauffeured SUV from Jeddah Airport"
+  },
+  {
+    title: "Exclusive Ziyarat Tours in Makkah: Visiting Cave Hira and Jabal al-Nour in Style",
+    category: "Pilgrimage Travel Guides",
+    author: "Chauffeur KSA Travel Team",
+    date: "May 23, 2026",
+    readTime: "6 min read",
+    excerpt: "Discover the best way to experience historical Ziyarat tours in Makkah. Tour sacred locations like Cave Hira, Jabal al-Nour, and Cave Thawr in ultimate comfort and privacy with a dedicated local driver.",
+    image: "/blogs/luxury-chauffeur-service-makkah.webp",
+    alt: "Jabal al-Nour mountain in Makkah with a luxury private vehicle waiting below"
+  },
+  {
+    title: "Top 5 Luxury Hotels in Makkah with Dedicated Private Driver Pick-up Services",
+    category: "Pilgrimage Travel Guides",
+    author: "Chauffeur KSA Travel Team",
+    date: "May 22, 2026",
+    readTime: "5 min read",
+    excerpt: "Explore the most premium hotels in Makkah, including Raffles Palace and Fairmont Clock Tower, that provide seamless underground VIP parking and exclusive chauffeur pickup loops.",
+    image: "/blogs/best transportation options in makkah.jpeg",
+    alt: "Luxury hotel entrance overlooking Masjid al-Haram with a private chauffeur"
+  },
+  {
+    title: "Visiting Al-Masjid an-Nabawi: A VIP Guide to Madinah’s Sacred Gateways",
+    category: "Pilgrimage Travel Guides",
+    author: "Chauffeur KSA Travel Team",
+    date: "May 21, 2026",
+    readTime: "5 min read",
+    excerpt: "Maximize your spiritual focus in Madinah with our VIP guide to Al-Masjid an-Nabawi. Learn about prayer timings, historic gates, and high-end hotel drops for absolute comfort.",
+    image: "/blogs/chauffeur-service-madinah-saudi-arabia.webp",
+    alt: "Beautiful white umbrellas of Al-Masjid an-Nabawi with luxury transport details"
+  },
+  {
     title: "What is the Best Private Driver Option for Elderly Pilgrims Performing Umrah?",
     category: "Pilgrimage Travel Guides",
     author: "Chauffeur KSA Travel Team",
