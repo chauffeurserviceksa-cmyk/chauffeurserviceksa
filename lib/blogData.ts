@@ -398,7 +398,264 @@ export const blogPosts = [
     excerpt: "Strategic logistical tips for those traveling the expansive desert route from Riyadh to Madinah in luxury.",
     image: "/blogs/travel guide from riyadh to madina.webp",
     alt: "High-end chauffeur service at the beautiful Madinah umbrellas"
+  },,
+  {
+    title: "Luxury Pilgrimage Packages: All-Inclusive Makkah & Madinah Tours with Private Chauffeur",
+    category: "Pilgrimage Travel Guides",
+    author: "Chauffeur KSA Travel Team",
+    date: "May 26, 2026",
+    readTime: "6 min read",
+    excerpt: "Experience a seamless all-inclusive pilgrimage package covering Makkah and Madinah with premium private chauffeur service, luxury accommodation, and exclusive access.",
+    image: "/blogs/luxury pilgrimage package.webp",
+    alt: "Premium chauffeur vehicle beside the Masjid al-Haram"
+  },
+  {
+    title: "How to Secure a VIP Access Pass for Masjid al-Haram During Ramadan",
+    category: "Pilgrimage Travel Guides",
+    author: "Chauffeur KSA Travel Team",
+    date: "May 27, 2026",
+    readTime: "5 min read",
+    excerpt: "Learn the step-by-step process to obtain a VIP access pass for Masjid al-Haram during the holy month, ensuring a comfortable and crowd-free experience.",
+    image: "/blogs/ramadan vip access.webp",
+    alt: "VIP entrance gate at Masjid al-Haram during Ramadan"
+  },
+  {
+    title: "Top 3 Premium Airport Transfer Services for Jeddah, Riyadh, and Dammam",
+    category: "VIP Airport Transfers",
+    author: "Chauffeur KSA Travel Team",
+    date: "May 28, 2026",
+    readTime: "4 min read",
+    excerpt: "Compare the best premium airport transfer services across Saudi Arabia's major airports, focusing on luxury, speed, and personalized concierge assistance.",
+    image: "/blogs/premium airport transfers.webp",
+    alt: "Luxury airport transfer vehicle at Jeddah Airport"
+  },
+  {
+    title: "Elite Family Umrah Packages: Kid-Friendly Luxury Chauffeur Services",
+    category: "Pilgrimage Travel Guides",
+    author: "Chauffeur KSA Travel Team",
+    date: "May 29, 2026",
+    readTime: "5 min read",
+    excerpt: "Discover family-focused Umrah packages that include kid-friendly amenities, spacious vehicles, and private driver expertise.",
+    image: "/blogs/family umrah luxury.webp",
+    alt: "Family in a luxury SUV with chauffeur"
+  },
+  {
+    title: "The Ultimate Guide to Nighttime Visitations at Al-Masjid an-Nabawi",
+    category: "Pilgrimage Travel Guides",
+    author: "Chauffeur KSA Travel Team",
+    date: "May 30, 2026",
+    readTime: "5 min read",
+    excerpt: "Explore the serene experience of visiting Al-Masjid an-Nabawi at night, with tips on timing, transport, and exclusive access.",
+    image: "/blogs/nighttime nabawi visit.webp",
+    alt: "Al-Masjid an-Nabawi illuminated at night with luxury vehicle"
+  },
+
+  {
+    title: "Luxury Car Rental Options for Pilgrims Visiting Makkah During Ramadan",
+    category: "Pilgrimage Travel Guides",
+    author: "Chauffeur KSA Travel Team",
+    date: "May 31, 2026",
+    readTime: "5 min read",
+    excerpt: "Explore premium car rental options tailored for pilgrims during Ramadan, focusing on comfort, safety, and proximity to the Holy Kaaba.",
+    image: "/blogs/luxury-car-rental-ramadan.webp",
+    alt: "Luxury car parked near the Masjid al-Haram during Ramadan",
+    related: ["luxury-pilgrimage-packages-all-inclusive-makkah-madinah-tours-with-private-chauffeur", "top-3-premium-airport-transfer-services-for-jeddah-riyadh-and-dammam"],
+    schema: `{
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Luxury Car Rental Options for Pilgrims Visiting Makkah During Ramadan",
+      "author": {"@type": "Organization", "name": "Chauffeur KSA Travel Team"},
+      "datePublished": "2026-05-31",
+      "image": "/blogs/luxury-car-rental-ramadan.webp",
+      "description": "Explore premium car rental options tailored for pilgrims during Ramadan."
+    }`
+  },
+  {
+    title: "How to Choose the Best Private Driver for Female Pilgrims",
+    category: "Pilgrimage Travel Guides",
+    author: "Chauffeur KSA Travel Team",
+    date: "June 01, 2026",
+    readTime: "4 min read",
+    excerpt: "A guide for female pilgrims on selecting safe, reputable, and culturally aware private drivers for their journey.",
+    image: "/blogs/female-pilgrim-driver-guide.webp",
+    alt: "Female pilgrim with a private chauffeur",
+    related: ["what-is-the-best-private-driver-option-for-elderly-pilgrims-performing-umrah", "elite-family-umrah-packages-kid-friendly-luxury-chauffeur-services"],
+    schema: `{
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "How to Choose the Best Private Driver for Female Pilgrims",
+      "author": {"@type": "Organization", "name": "Chauffeur KSA Travel Team"},
+      "datePublished": "2026-06-01",
+      "image": "/blogs/female-pilgrim-driver-guide.webp",
+      "description": "Guide for female pilgrims on selecting safe private drivers."
+    }`
+  },
+  {
+    title: "Top 3 Premium Airport Transfer Services for Jeddah, Riyadh, and Dammam",
+    category: "VIP Airport Transfers",
+    author: "Chauffeur KSA Travel Team",
+    date: "June 02, 2026",
+    readTime: "5 min read",
+    excerpt: "Compare the top three luxury airport transfer services across Saudi Arabia’s major hubs, focusing on speed, comfort, and concierge support.",
+    image: "/blogs/top3-airport-transfer-services.webp",
+    alt: "Luxury airport transfer vehicle at Saudi airport",
+    related: ["luxury-pilgrimage-packages-all-inclusive-makkah-madinah-tours-with-private-chauffeur", "elite-family-umrah-packages-kid-friendly-luxury-chauffeur-services"],
+    schema: `{
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Top 3 Premium Airport Transfer Services for Jeddah, Riyadh, and Dammam",
+      "author": {"@type": "Organization", "name": "Chauffeur KSA Travel Team"},
+      "datePublished": "2026-06-02",
+      "image": "/blogs/top3-airport-transfer-services.webp",
+      "description": "Compare the top three luxury airport transfer services across Saudi Arabia’s major hubs."
+    }`
+  },
+  {
+    title: "Family-Friendly Umrah Packages with Luxury Chauffeur",
+    category: "Pilgrimage Travel Guides",
+    author: "Chauffeur KSA Travel Team",
+    date: "June 03, 2026",
+    readTime: "6 min read",
+    excerpt: "Discover curated Umrah packages designed for families, featuring spacious vehicles, kid-friendly amenities, and premium hotel drops.",
+    image: "/blogs/family-friendly-umrah-packages.webp",
+    alt: "Family in a luxury SUV with driver",
+    related: ["elite-family-umrah-packages-kid-friendly-luxury-chauffeur-services", "what-is-the-best-private-driver-option-for-elderly-pilgrims-performing-umrah"],
+    schema: `{
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Family-Friendly Umrah Packages with Luxury Chauffeur",
+      "author": {"@type": "Organization", "name": "Chauffeur KSA Travel Team"},
+      "datePublished": "2026-06-03",
+      "image": "/blogs/family-friendly-umrah-packages.webp",
+      "description": "Curated Umrah packages for families with luxury transport."
+    }`
+  },
+  {
+    title: "Nighttime Visits to Al-Masjid an-Nabawi: Tips and Best Practices",
+    category: "Pilgrimage Travel Guides",
+    author: "Chauffeur KSA Travel Team",
+    date: "June 04, 2026",
+    readTime: "4 min read",
+    excerpt: "Explore the serene experience of night visits to the Prophet’s Mosque with guidance on timing, dress, and premium transport.",
+    image: "/blogs/nighttime-masjid-an-nabawi-tips.webp",
+    alt: "Al-Masjid an-Nabawi illuminated at night",
+    related: ["the-ultimate-guide-to-nighttime-visitations-at-al-masjid-an-nabawi", "luxury-pilgrimage-packages-all-inclusive-makkah-madinah-tours-with-private-chauffeur"],
+    schema: `{
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Nighttime Visits to Al-Masjid an-Nabawi: Tips and Best Practices",
+      "author": {"@type": "Organization", "name": "Chauffeur KSA Travel Team"},
+      "datePublished": "2026-06-04",
+      "image": "/blogs/nighttime-masjid-an-nabawi-tips.webp",
+      "description": "Guidance on night visits to the Prophet’s Mosque."
+    }`
   }
+  ,
+  {
+    title: "Guided Night Tours of the Holy Haram: Experience Spiritual Serenity",
+    category: "Pilgrimage Travel Guides",
+    author: "Chauffeur KSA Travel Team",
+    date: "June 5, 2026",
+    readTime: "5 min read",
+    excerpt: "Discover the tranquility of night-time tours around the Holy Haram, ensuring spiritual peace and premium comfort.",
+    image: "/blogs/guided-night-tours-haram.webp",
+    alt: "Illuminated Holy Haram at night with a luxury chauffeur vehicle",
+    related: ["luxury-pilgrimage-packages-all-inclusive-makkah-madinah-tours-with-private-chauffeur", "top-3-premium-airport-transfer-services-for-jeddah-riyadh-and-dammam"]
+  },
+  {
+    title: "Optimizing Pilgrim Comfort: Climate-Controlled Vehicles for Desert Heat",
+    category: "Pilgrimage Travel Guides",
+    author: "Chauffeur KSA Travel Team",
+    date: "June 6, 2026",
+    readTime: "4 min read",
+    excerpt: "Explore how climate-controlled luxury vehicles enhance pilgrim comfort during scorching desert conditions.",
+    image: "/blogs/climate-controlled-vehicles.webp",
+    alt: "Modern air-conditioned SUV inside desert landscape",
+    related: ["luxury-pilgrimage-packages-all-inclusive-makkah-madinah-tours-with-private-chauffeur"]
+  },
+  {
+    title: "Family-Friendly Pilgrimage Itineraries: Balancing Worship and Leisure",
+    category: "Pilgrimage Travel Guides",
+    author: "Chauffeur KSA Travel Team",
+    date: "June 7, 2026",
+    readTime: "6 min read",
+    excerpt: "Design a family-friendly pilgrimage schedule that combines worship, relaxation, and kid-friendly activities.",
+    image: "/blogs/family-friendly-pilgrimage-itinerary.webp",
+    alt: "Family in a spacious luxury SUV near a historic mosque",
+    related: ["elite-family-umrah-packages-kid-friendly-luxury-chauffeur-services", "family-friendly-umrah-packages-with-luxury-chauffeur"]
+  },
+  {
+    title: "Premium Concierge Services for Pilgrims: From Visa Assistance to Post-Umrah Care",
+    category: "Pilgrimage Travel Guides",
+    author: "Chauffeur KSA Travel Team",
+    date: "June 8, 2026",
+    readTime: "5 min read",
+    excerpt: "A comprehensive guide to concierge services that simplify every step of the pilgrim journey.",
+    image: "/blogs/premium-concierge-services.webp",
+    alt: "Concierge desk with travel documents and luxury vehicle backdrop",
+    related: ["luxury-pilgrimage-packages-all-inclusive-makkah-madinah-tours-with-private-chauffeur"]
+  },
+  {
+    title: "Sustainable Luxury Travel: Eco-friendly Chauffeur Services for Pilgrims",
+    category: "Pilgrimage Travel Guides",
+    author: "Chauffeur KSA Travel Team",
+    date: "June 9, 2026",
+    readTime: "4 min read",
+    excerpt: "Learn how eco-friendly practices are integrated into premium chauffeur services for environmentally conscious pilgrims.",
+    image: "/blogs/sustainable-luxury-travel.webp",
+    alt: "Electric luxury SUV beside a green oasis",
+    related: ["luxury-pilgrimage-packages-all-inclusive-makkah-madinah-tours-with-private-chauffeur", "top-3-premium-airport-transfer-services-for-jeddah-riyadh-and-dammam"]
+  }
+  {
+    title: "Essential Guide to Performing Tawaf Safely with a Private Chauffeur",
+    category: "Pilgrimage Travel Guides",
+    author: "Chauffeur KSA Travel Team",
+    date: "June 10, 2026",
+    readTime: "5 min read",
+    excerpt: "Learn how a private chauffeur can streamline your Tawaf experience, providing door-to-door service, luggage handling, and flexible timing for a stress‑free pilgrimage.",
+    image: "/blogs/tawaf-private-chauffeur.webp",
+    alt: "Luxury chauffeur vehicle parked near the Masjid al‑Haram for Tawaf"
+  },
+  {
+    title: "How to Optimize Your Pilgrimage Schedule with Early Morning Transfers",
+    category: "Pilgrimage Travel Guides",
+    author: "Chauffeur KSA Travel Team",
+    date: "June 12, 2026",
+    readTime: "4 min read",
+    excerpt: "Discover the benefits of early morning private transfers to avoid crowds, reduce heat exposure, and maximize your prayer time during Hajj and Umrah.",
+    image: "/blogs/early-morning-transfer.webp",
+    alt: "Private chauffeur vehicle heading out at sunrise on the highway"
+  },
+  {
+    title: "Top 3 Luxury Vehicles for Pilgrims with Disabilities",
+    category: "Pilgrimage Travel Guides",
+    author: "Chauffeur KSA Travel Team",
+    date: "June 14, 2026",
+    readTime: "6 min read",
+    excerpt: "A guide to the most accessible luxury SUVs equipped with wheelchair lifts, adaptive seating, and climate control to ensure comfort for pilgrims with mobility challenges.",
+    image: "/blogs/luxury-vehicles-disabilities.webp",
+    alt: "Accessible luxury SUV with wheelchair ramp"
+  },
+  {
+    title: "Understanding Hajj Rituals: A Chauffeur’s Role in Efficient Pilgrimage",
+    category: "Pilgrimage Travel Guides",
+    author: "Chauffeur KSA Travel Team",
+    date: "June 16, 2026",
+    readTime: "5 min read",
+    excerpt: "Explore how professional chauffeurs support pilgrims through each Hajj rite, from Ihram preparation to Mina logistics, ensuring timely arrivals and minimal fatigue.",
+    image: "/blogs/chauffeur-hajj-support.webp",
+    alt: "Chauffeur assisting pilgrims with Hajj gear"
+  },
+  {
+    title: "Family Pilgrimage Planning: Coordinating Multiple Transfers in Makkah",
+    category: "Pilgrimage Travel Guides",
+    author: "Chauffeur KSA Travel Team",
+    date: "June 18, 2026",
+    readTime: "5 min read",
+    excerpt: "Tips for families traveling with several members, focusing on vehicle selection, staggered drop‑offs, and seamless coordination of hotel and mosque visits.",
+    image: "/blogs/family-pilgrimage-coordination.webp",
+    alt: "Family in a spacious luxury SUV heading to Masjid al‑Haram"
+  },
 ];
 
 export function slugifyBlog(text: string) {
