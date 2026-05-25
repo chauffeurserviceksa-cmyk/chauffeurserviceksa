@@ -670,3 +670,54 @@ export function unslugifyBlog(slug: string) {
 export function getBlogData(slug: string) {
   return blogPosts.find(b => slugifyBlog(b.title) === slug);
 }
+
+// --------------------------
+// JSON‑LD schema generation
+// --------------------------
+/**
+ * Convert a date string like "May 25, 2026" to ISO YYYY‑MM‑DD format.
+ */
+function formatDateToISO(dateStr: string): string {
+  const date = new Date(dateStr);
+  // Ensure valid date; fallback to original string if parsing fails
+  if (isNaN(date.getTime())) return dateStr;
+  return date.toISOString().split('T')[0];
+}
+
+/**
+ * Generate a JSON‑LD BlogPosting schema for a given blog post.
+ * Returns the schema as a pretty‑printed JSON string.
+ */
+export function generateBlogSchema(slug: string): string | null {
+  const post = getBlogData(slug);
+  if (!post) return null;
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "author": { "@type": "Organization", "name": post.author },
+    "datePublished": formatDateToISO(post.date),
+    "image": post.image,
+    "description": post.excerpt,
+    "url": `/blogs/${slug}`
+  };
+  return JSON.stringify(schema, null, 2);
+}
+
+// Export a lookup of all schemas for convenience (optional)
+export const blogSchemas: Record<string, string> = blogPosts.reduce((acc, post) => {
+  const slug = slugifyBlog(post.title);
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "author": { "@type": "Organization", "name": post.author },
+    "datePublished": formatDateToISO(post.date),
+    "image": post.image,
+    "description": post.excerpt,
+    "url": `/blogs/${slug}`
+  };
+  acc[slug] = JSON.stringify(schema, null, 2);
+  return acc;
+}, {} as Record<string, string>);
+
