@@ -1,0 +1,593 @@
+/* Luxury Admin Panel Custom CSS Stylesheet */
+
+.admin-body {
+  background-color: #0b0b0b;
+  color: #ffffff;
+  min-height: 100vh;
+  font-family: var(--font-poppins), sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Glassmorphism Cards */
+.admin-card {
+  background: rgba(18, 18, 18, 0.8);
+  border: 1px solid rgba(201, 162, 39, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(8px);
+  padding: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.admin-card:hover {
+  border-color: rgba(201, 162, 39, 0.25);
+  box-shadow: 0 12px 40px 0 rgba(201, 162, 39, 0.05);
+}
+
+/* Glowing Elements */
+.gold-glow {
+  text-shadow: 0 0 10px rgba(201, 162, 39, 0.4);
+}
+
+.border-gold-glow {
+  box-shadow: 0 0 15px rgba(201, 162, 39, 0.15);
+}
+
+/* Sidebar Styling */
+.admin-sidebar {
+  width: 280px;
+  background: #0e0e0e;
+  border-right: 1px solid rgba(201, 162, 39, 0.15);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.admin-sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+  padding-left: 0.5rem;
+}
+
+.admin-sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.admin-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.admin-menu-item:hover {
+  color: #ffffff;
+  background: rgba(201, 162, 39, 0.05);
+  border-color: rgba(201, 162, 39, 0.1);
+}
+
+.admin-menu-item.active {
+  color: #000000;
+  background: var(--color-gold);
+  font-weight: 600;
+  box-shadow: 0 4px 20px rgba(201, 162, 39, 0.3);
+}
+
+.admin-menu-item.active svg {
+  color: #000000 !important;
+}
+
+/* Main Layout */
+.admin-main {
+  margin-left: 280px;
+  padding: 2.5rem;
+  min-height: 100vh;
+  flex-grow: 1;
+}
+
+/* Top Stats Panel */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.stat-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-info h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 0.5rem;
+}
+
+.stat-info p {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: var(--font-playfair);
+}
+
+.stat-icon-wrapper {
+  background: rgba(201, 162, 39, 0.1);
+  border: 1px solid rgba(201, 162, 39, 0.2);
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold);
+}
+
+/* Tables styling */
+.admin-table-wrapper {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.admin-table th {
+  padding: 1rem 1.25rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.admin-table td {
+  padding: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+  vertical-align: middle;
+}
+
+.admin-table tr:hover td {
+  background: rgba(255, 255, 255, 0.01);
+  color: #ffffff;
+}
+
+/* Badge styling */
+.badge {
+  padding: 0.35rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.badge-confirmed {
+  background: rgba(46, 117, 89, 0.15);
+  color: #4ade80;
+  border: 1px solid rgba(74, 222, 128, 0.3);
+}
+
+.badge-pending {
+  background: rgba(201, 162, 39, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+.badge-completed {
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  border: 1px solid rgba(96, 165, 250, 0.3);
+}
+
+.badge-cancelled {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border: 1px solid rgba(248, 113, 113, 0.3);
+}
+
+/* Inputs & Form Controls */
+.admin-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.admin-input-group label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.70);
+}
+
+.admin-input {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: #ffffff;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.admin-input:focus {
+  outline: none;
+  border-color: var(--color-gold);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 0 10px rgba(201, 162, 39, 0.1);
+}
+
+.admin-select {
+  background: #141414;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.admin-select:focus {
+  outline: none;
+  border-color: var(--color-gold);
+  box-shadow: 0 0 10px rgba(201, 162, 39, 0.15);
+}
+
+/* Dynamic Buttons */
+.btn-admin-gold {
+  background: var(--color-gold);
+  color: #000000;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-admin-gold:hover {
+  background: var(--color-gold-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(201, 162, 39, 0.25);
+}
+
+.btn-admin-outline {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-admin-outline:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-admin-danger {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-admin-danger:hover {
+  background: rgba(239, 68, 68, 0.3);
+}
+
+/* Executive Letterhead Paper Look */
+.letterhead-paper {
+  background: #ffffff;
+  color: #333333;
+  width: 100%;
+  max-width: 800px;
+  min-height: 1050px;
+  padding: 3.5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.letterhead-header {
+  border-bottom: 2px double #c9a227;
+  padding-bottom: 1.5rem;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.letterhead-title {
+  color: #111111;
+  font-size: 2.2rem;
+  font-family: var(--font-playfair), 'Times New Roman', serif;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.letterhead-contact {
+  text-align: right;
+  font-size: 0.8rem;
+  color: #666666;
+  line-height: 1.4;
+  font-family: var(--font-poppins), sans-serif;
+}
+
+.letterhead-content {
+  flex-grow: 1;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #222222;
+  text-align: justify;
+}
+
+.letterhead-footer {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 1.5rem;
+  margin-top: 3rem;
+  font-size: 0.75rem;
+  color: #888888;
+  text-align: center;
+  font-family: var(--font-poppins), sans-serif;
+}
+
+/* Professional Invoice Sheet */
+.invoice-sheet {
+  background: #ffffff;
+  color: #1a1a1a;
+  padding: 3rem;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  font-family: var(--font-poppins), sans-serif;
+}
+
+.invoice-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.invoice-details {
+  text-align: right;
+  line-height: 1.6;
+}
+
+.invoice-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.invoice-section-title {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: #777777;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 3rem;
+}
+
+.invoice-table th {
+  background: #f8f9fa;
+  color: #555555;
+  padding: 0.85rem 1rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-align: left;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.invoice-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e9ecef;
+  font-size: 0.95rem;
+}
+
+.invoice-totals {
+  width: 300px;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.invoice-total-row {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.invoice-total-grand {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #c9a227;
+  border-bottom: none;
+  padding-top: 0.5rem;
+}
+
+/* Email Template Simulator Frame */
+.email-simulator {
+  background: #141414;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.email-header-bar {
+  background: #1e1e1e;
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.email-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.email-body-preview {
+  padding: 2.5rem;
+  background: #f9f9f9;
+  display: flex;
+  justify-content: center;
+}
+
+.email-markup-content {
+  background: #ffffff;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  font-family: var(--font-poppins), Arial, sans-serif;
+  color: #333333;
+}
+
+.email-hero-gold {
+  background: #000000;
+  background-image: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  padding: 2.5rem;
+  text-align: center;
+  border-bottom: 3px solid #c9a227;
+}
+
+/* Print Overrides */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  
+  .printable-area, .printable-area * {
+    visibility: visible;
+  }
+  
+  .printable-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: none !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  
+  /* Hide Admin Layout Elements */
+  .admin-sidebar, .admin-header, .no-print, button, .tabs-container {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animated-view {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Responsive Overrides */
+@media (max-width: 1024px) {
+  .admin-sidebar {
+    width: 80px;
+    padding: 2rem 0.5rem;
+  }
+  
+  .admin-sidebar-logo span, .admin-menu-item span {
+    display: none;
+  }
+  
+  .admin-sidebar-logo {
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .admin-menu-item {
+    justify-content: center;
+    padding: 1rem;
+  }
+  
+  .admin-main {
+    margin-left: 80px;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .admin-main {
+    padding: 1rem;
+  }
+  
+  .letterhead-paper, .invoice-sheet {
+    padding: 1.5rem;
+  }
+}
