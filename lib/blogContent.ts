@@ -1,59 +1,6 @@
 import { getBlogData, slugifyBlog } from './blogData';
 
 export const blogContents: Record<string, string> = {
-  // ... existing blog content entries (unchanged) ...
-};
-
-/**
- * Render a complete blog page with JSON-LD schema and internal linking.
- * @param slug The slugified blog title.
- * @returns Full HTML string for the blog page.
- */
-export function renderBlog(slug: string): string {
-  const content = blogContents[slug] || '';
-  const data = getBlogData(slug);
-  if (!data) return content; // fallback if metadata missing
-
-  // Build JSON-LD schema for BlogPosting
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: data.title,
-    image: data.image,
-    author: {
-      '@type': 'Organization',
-      name: data.author,
-    },
-    datePublished: new Date(data.date).toISOString().split('T')[0],
-    description: data.excerpt,
-    articleBody: content.replace(/<[^>]+>/g, ''), // plain text for search engines
-  };
-
-  const schemaScript = `<script type="application/ld+json">${JSON.stringify(schema, null, 2)}</script>`;
-
-  // Internal linking: related articles if any
-  const relatedSlugs = (data as any).related || [];
-  let relatedHtml = '';
-  if (relatedSlugs.length) {
-    const links = relatedSlugs
-      .map((rel: string) => {
-        const relSlug = slugifyBlog(rel);
-        return `<li><a href="/blogs/${relSlug}" class="related-link">${rel}</a></li>`;
-      })
-      .join('');
-    relatedHtml = `<section class="related-articles"><h2>Related Articles</h2><ul>${links}</ul></section>`;
-  }
-
-  // Combine everything
-  return `
-    ${schemaScript}
-    <article class="blog-post">
-      ${content}
-    </article>
-    ${relatedHtml}
-  `;
-}
-
   "madinah-to-makkah-pilgrim-transport-mercedes-v-class-vs-haramain-high-speed-train": `
     <p style="margin-bottom: 2rem;">
       The transit between the two holy cities—Madinah, the peaceful city of the Prophet (PBUH), and Makkah, the center of Islamic devotion—is a core phase of any Umrah or Hajj pilgrimage. Spanning a distance of approximately 450 kilometers across the scenic Hijaz highway, this journey requires a transit option that preserves the spiritual peace and physical well-being of your family.
@@ -945,3 +892,53 @@ export function renderBlog(slug: string): string {
   "": "",
   // Invalid placeholder removed 
 };
+
+/**
+ * Render a complete blog page with JSON-LD schema and internal linking.
+ * @param slug The slugified blog title.
+ * @returns Full HTML string for the blog page.
+ */
+export function renderBlog(slug: string): string {
+  const content = blogContents[slug] || '';
+  const data = getBlogData(slug);
+  if (!data) return content; // fallback if metadata missing
+
+  // Build JSON-LD schema for BlogPosting
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: data.title,
+    image: data.image,
+    author: {
+      '@type': 'Organization',
+      name: data.author,
+    },
+    datePublished: new Date(data.date).toISOString().split('T')[0],
+    description: data.excerpt,
+    articleBody: content.replace(/<[^>]+>/g, ''), // plain text for search engines
+  };
+
+  const schemaScript = `<script type="application/ld+json">${JSON.stringify(schema, null, 2)}</script>`;
+
+  // Internal linking: related articles if any
+  const relatedSlugs = (data as any).related || [];
+  let relatedHtml = '';
+  if (relatedSlugs.length) {
+    const links = relatedSlugs
+      .map((rel: string) => {
+        const relSlug = slugifyBlog(rel);
+        return `<li><a href="/blogs/${relSlug}" class="related-link">${rel}</a></li>`;
+      })
+      .join('');
+    relatedHtml = `<section class="related-articles"><h2>Related Articles</h2><ul>${links}</ul></section>`;
+  }
+
+  // Combine everything
+  return `
+    ${schemaScript}
+    <article class="blog-post">
+      ${content}
+    </article>
+    ${relatedHtml}
+  `;
+}

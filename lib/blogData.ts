@@ -1,4 +1,16 @@
-export const blogPosts = [
+interface BlogPost {
+  title: string;
+  category: string;
+  author: string;
+  date: string;
+  readTime: string;
+  excerpt: string;
+  image: string;
+  alt: string;
+  related?: string[];
+  schema?: string;
+}
+  export const blogPosts: BlogPost[] = [
   {
     title: "Madinah to Makkah Pilgrim Transport: Mercedes V-Class vs. Haramain High-Speed Train",
     category: "Pilgrimage Travel Guides",
@@ -398,7 +410,7 @@ export const blogPosts = [
     excerpt: "Strategic logistical tips for those traveling the expansive desert route from Riyadh to Madinah in luxury.",
     image: "/blogs/travel guide from riyadh to madina.webp",
     alt: "High-end chauffeur service at the beautiful Madinah umbrellas"
-  },,
+  },
   {
     title: "Luxury Pilgrimage Packages: All-Inclusive Makkah & Madinah Tours with Private Chauffeur",
     category: "Pilgrimage Travel Guides",
@@ -605,7 +617,7 @@ export const blogPosts = [
     image: "/blogs/sustainable-luxury-travel.webp",
     alt: "Electric luxury SUV beside a green oasis",
     related: ["luxury-pilgrimage-packages-all-inclusive-makkah-madinah-tours-with-private-chauffeur", "top-3-premium-airport-transfer-services-for-jeddah-riyadh-and-dammam"]
-  }
+  },
   {
     title: "Essential Guide to Performing Tawaf Safely with a Private Chauffeur",
     category: "Pilgrimage Travel Guides",
@@ -668,7 +680,7 @@ export function unslugifyBlog(slug: string) {
 }
 
 export function getBlogData(slug: string) {
-  return blogPosts.find(b => slugifyBlog(b.title) === slug);
+  return blogPosts.find(b => slugifyBlog(b.title) === slug) ?? undefined;
 }
 
 // --------------------------
@@ -694,11 +706,11 @@ export function generateBlogSchema(slug: string): string | null {
   const schema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": post.title,
-    "author": { "@type": "Organization", "name": post.author },
-    "datePublished": formatDateToISO(post.date),
-    "image": post.image,
-    "description": post.excerpt,
+    "headline": post!.title,
+    "author": { "@type": "Organization", "name": post!.author },
+    "datePublished": formatDateToISO(post!.date),
+    "image": post!.image,
+    "description": post!.excerpt,
     "url": `/blogs/${slug}`
   };
   return JSON.stringify(schema, null, 2);
@@ -710,11 +722,11 @@ export const blogSchemas: Record<string, string> = blogPosts.reduce((acc, post) 
   const schema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": post.title,
-    "author": { "@type": "Organization", "name": post.author },
-    "datePublished": formatDateToISO(post.date),
-    "image": post.image,
-    "description": post.excerpt,
+    "headline": post!.title,
+    "author": { "@type": "Organization", "name": post!.author },
+    "datePublished": formatDateToISO(post!.date),
+    "image": post!.image,
+    "description": post!.excerpt,
     "url": `/blogs/${slug}`
   };
   acc[slug] = JSON.stringify(schema, null, 2);
