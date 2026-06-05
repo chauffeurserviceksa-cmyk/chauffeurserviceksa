@@ -41,10 +41,10 @@ export default function Header() {
         
         <nav style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
           <Link href="/">Home</Link>
-          <Link href="/#services">Services</Link>
-          <Link href="/#fleet">Fleet</Link>
+          <Link href="/services">Services</Link>
+          <Link href="/fleet">Fleet</Link>
           <Link href="/routes">Routes</Link>
-          <Link href="/#cities">Cities</Link>
+          <Link href="/cities">Cities</Link>
           <Link href="/blogs">Blogs</Link>
           <Link href="/about">About</Link>
           <Link href="/contact">Contact</Link>

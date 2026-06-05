@@ -34,8 +34,8 @@ export default function Footer() {
             <h4 style={{ marginBottom: '1.5rem', color: 'white', fontSize: '1.2rem' }}>Quick Links</h4>
             <ul className="footer-links" style={{ color: 'rgba(255,255,255,0.6)', display: 'flex', flexDirection: 'column', gap: '1rem', listStyle: 'none', padding: 0 }}>
               <li><Link href="/">Home</Link></li>
-              <li><Link href="/#services">Services</Link></li>
-              <li><Link href="/#fleet">Fleet</Link></li>
+              <li><Link href="/services">Services</Link></li>
+              <li><Link href="/fleet">Fleet</Link></li>
               <li><Link href="/routes">All Routes</Link></li>
               <li><Link href="/blogs">Travel Blogs</Link></li>
             </ul>
