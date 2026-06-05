@@ -18,9 +18,10 @@ export default function Home() {
     {
       "@context": "https://schema.org",
       "@type": "Organization",
+      "@id": "https://chauffeurserviceksa.com/#organization",
       "name": "Chauffeur KSA",
       "url": "https://chauffeurserviceksa.com",
-      "logo": "https://chauffeurserviceksa.com/logo.png",
+      "logo": "https://chauffeurserviceksa.com/app/icon.png",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+966501234567",
@@ -31,29 +32,22 @@ export default function Home() {
         "https://facebook.com/chauffeurksa",
         "https://twitter.com/chauffeurksa",
         "https://instagram.com/chauffeurksa"
-      ],
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Olaya St",
-        "addressLocality": "Riyadh",
-        "addressRegion": "Riyadh",
-        "postalCode": "12211",
-        "addressCountry": "SA"
-      }
+      ]
     },
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
+      "@id": "https://chauffeurserviceksa.com/#localbusiness",
       "name": "Chauffeur KSA",
-      "image": "https://chauffeurserviceksa.com/hero-bg.jpg",
-      "@id": "https://chauffeurserviceksa.com",
+      "image": "https://chauffeurserviceksa.com/chauffeur-service-saudi-arabia-hero.webp",
       "url": "https://chauffeurserviceksa.com",
       "telephone": "+966501234567",
+      "email": "bookings@chauffeurservice.sa",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Olaya St",
+        "streetAddress": "King Fahd Road, Olaya District",
         "addressLocality": "Riyadh",
-        "addressRegion": "Riyadh",
+        "addressRegion": "Riyadh Province",
         "postalCode": "12211",
         "addressCountry": "SA"
       },
@@ -76,17 +70,30 @@ export default function Home() {
         "opens": "00:00",
         "closes": "23:59"
       },
-      "serviceArea": {
-        "@type": "Country",
-        "name": "SA"
-      },
       "areaServed": ["Riyadh", "Jeddah", "Makkah", "Madinah", "Dammam", "Saudi Arabia"],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+966501234567",
-        "contactType": "WhatsApp",
-        "availableLanguage": ["English", "Arabic"]
-      }
+      "priceRange": "$$$"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does a chauffeur service cost in Saudi Arabia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Chauffeur service rates in Saudi Arabia start at approximately 250 SAR to 700 SAR per day depending on the vehicle class (e.g. Ford Taurus, GMC Yukon XL, Mercedes S-Class) and booking type (hourly, daily, intercity)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide Umrah transfers from Jeddah Airport to Makkah?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we specialize in luxury private transfers for Umrah pilgrims. Our chauffeurs meet guests at King Abdulaziz International Airport (JED) in Jeddah and transport them directly to their hotel in Makkah or Madinah."
+          }
+        }
+      ]
     }
   ];
 
@@ -104,11 +111,14 @@ export default function Home() {
       
       {/* About Company Snippet */}
       <section id="about" style={{ padding: '8rem 0', background: '#111', color: 'white', textAlign: 'center' }}>
-         <div className="container" style={{ maxWidth: '800px' }}>
+         <div className="container" style={{ maxWidth: '900px' }}>
             <span style={{ color: 'var(--color-gold)', fontWeight: 600, letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.9rem' }}>Welcome to Chauffeur KSA</span>
-            <h2 style={{ fontSize: '3rem', margin: '1rem 0 2rem' }}>Defining Luxury Travel in Saudi Arabia</h2>
+            <h2 style={{ fontSize: '3rem', margin: '1rem 0 2rem', fontFamily: 'var(--font-heading)' }}>Defining Luxury Ground Transportation in Saudi Arabia</h2>
+            <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.2rem', lineHeight: '1.9', marginBottom: '2rem' }}>
+              Chauffeur KSA is a premier, fully licensed ground transportation company operating under the regulations of the Transport General Authority (TGA) of Saudi Arabia. With a physical headquarters located in the Olaya District, Riyadh, we offer bespoke travel solutions for diplomats, corporate executives, and VIP guests across the Kingdom.
+            </p>
             <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.2rem', lineHeight: '1.9' }}>
-              Founded with the vision to redefine premium ground transportation, Chauffeur KSA provides unparalleled service for diplomats, executives, and discerning travelers. We guarantee absolute discretion, punctuality, and an impeccably maintained fleet.
+              We specialize in premium <a href="/services" style={{ color: 'var(--color-gold)', textDecoration: 'underline' }}>luxury airport transfer services</a> at King Khalid International Airport (RUH) in Riyadh and King Abdulaziz International Airport (JED) in Jeddah, alongside elite <a href="/services" style={{ color: 'var(--color-gold)', textDecoration: 'underline' }}>private chauffeur drivers</a> for intercity business trips and spiritual Hajj & Umrah transfers to Makkah and Madinah. We guarantee 100% punctuality, absolute privacy, and a pristine <a href="/fleet" style={{ color: 'var(--color-gold)', textDecoration: 'underline' }}>luxury vehicle fleet</a>.
             </p>
          </div>
       </section>

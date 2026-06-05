@@ -16,8 +16,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Chauffeur KSA | Private Drivers",
-  description: "Luxury chauffeur & private driver services in Saudi Arabia. Reliable airport transfers and intercity travel.",
+  title: "Luxury Chauffeur Service Saudi Arabia | Private Driver KSA",
+  description: "Experience premium chauffeur and private driver services in Saudi Arabia. VIP airport transfers at Riyadh (RUH) & Jeddah (JED), executive corporate travel, and long-distance intercity rides.",
   alternates: {
     canonical: 'https://chauffeurserviceksa.com',
   },
