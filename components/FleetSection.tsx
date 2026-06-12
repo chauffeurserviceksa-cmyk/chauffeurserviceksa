@@ -3,12 +3,12 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const vehicles = [
-  { name: 'Mercedes S-Class', type: 'Luxury Sedan', image: '/Cars/mercedes-s-class-chauffeur-service-saudi-arabia.jpeg', pax: 3, luggage: 2, price: '450 SAR' },
+  { name: 'Mercedes S-Class', type: 'High-Class Sedan', image: '/Cars/mercedes-s-class-chauffeur-service-saudi-arabia.jpeg', pax: 3, luggage: 2, price: '450 SAR' },
   { name: 'BMW 7 Series', type: 'Executive Sedan', image: '/Cars/bmw-7-series-executive-chauffeur-ksa.jpeg', pax: 3, luggage: 2, price: '450 SAR' },
-  { name: 'Genesis G90', type: 'Luxury Sedan', image: '/Cars/Genesis G90.jpeg', pax: 3, luggage: 2, price: '500 SAR' },
+  { name: 'Genesis G90', type: 'High-Class Sedan', image: '/Cars/Genesis G90.jpeg', pax: 3, luggage: 2, price: '500 SAR' },
   { name: 'Ford Taurus', type: 'Executive Sedan', image: '/Cars/Ford Taurus.jpeg', pax: 3, luggage: 2, price: '300 SAR' },
-  { name: 'Cadillac Escalade', type: 'VIP SUV', image: '/Cars/cadillac-escalade-vip-chauffeur-saudi-arabia.jpeg', pax: 6, luggage: 5, price: '700 SAR' },
-  { name: 'GMC Yukon XL', type: 'Premium SUV', image: '/Cars/gmc-yukon-xl-private-driver-ksa.webp', pax: 6, luggage: 6, price: '500 SAR' },
+  { name: 'Cadillac Escalade', type: 'Full-size SUV', image: '/Cars/cadillac-escalade-vip-chauffeur-saudi-arabia.jpeg', pax: 6, luggage: 5, price: '700 SAR' },
+  { name: 'GMC Yukon XL', type: 'Full-size SUV', image: '/Cars/gmc-yukon-xl-private-driver-ksa.webp', pax: 6, luggage: 6, price: '500 SAR' },
   { name: 'Mercedes V-Class', type: 'Executive Van', image: '/Cars/Mercedes Benz V Class.jpeg', pax: 7, luggage: 7, price: '550 SAR' },
   { name: 'Daihatsu Gran Max', type: 'Standard Van', image: '/Cars/Daihatsu Gran Max.jpeg', pax: 5, luggage: 4, price: '250 SAR' }
 ];
@@ -20,10 +20,10 @@ export default function FleetSection() {
         <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
           <span style={{ color: 'var(--color-gold)', fontWeight: 600, letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.9rem' }}>The Collection</span>
           <h2 style={{ marginTop: '0.5rem', marginBottom: '1.5rem', fontSize: '3.5rem', color: 'var(--color-white)', fontFamily: 'var(--font-heading)' }}>
-            Exquisite Luxury Fleet
+            Exquisite Vehicle Fleet
           </h2>
           <p style={{ color: 'rgba(255,255,255,0.7)', maxWidth: '850px', margin: '0 auto', fontSize: '1.25rem', lineHeight: '1.8' }}>
-            Our fleet offers the pinnacle of executive ground transportation. Choose from our meticulously maintained luxury sedans, executive SUVs, and premium vehicles, all operated by professional chauffeurs across Saudi Arabia for a seamless travel experience.
+            Our fleet offers reliable executive ground transportation. Choose from our meticulously maintained sedans, executive SUVs, and family vehicles, all operated by professional chauffeurs across Saudi Arabia for a seamless travel experience.
           </p>
         </div>
         

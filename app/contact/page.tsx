@@ -85,7 +85,7 @@ export default function ContactPage() {
             Contact Us
           </h1>
           <p style={{ fontSize: '1.25rem', color: 'rgba(255,255,255,0.7)', maxWidth: '800px', margin: '0 auto' }}>
-            24/7 Premium Concierge Support for Your Chauffeur Bookings.
+            24/7 Support for Your Chauffeur Bookings.
           </p>
         </div>
       </section>
@@ -156,7 +156,7 @@ export default function ContactPage() {
             </div>
             <div>
               <h4 style={{ fontSize: '1.2rem', marginBottom: '1rem', color: '#111' }}>Are your drivers English-speaking?</h4>
-              <p style={{ color: '#666', lineHeight: '1.7', marginBottom: '2rem' }}>Yes, we specialize in serving international clients. All our chauffeurs for executive and VIP services are fluent in English and trained in professional protocol to ensure a seamless communication experience.</p>
+              <p style={{ color: '#666', lineHeight: '1.7', marginBottom: '2rem' }}>Yes, we specialize in serving international clients. All our chauffeurs for executive services are fluent in English and trained in professional protocol to ensure a seamless communication experience.</p>
               
               <h4 style={{ fontSize: '1.2rem', marginBottom: '1rem', color: '#111' }}>What is your cancellation policy?</h4>
               <p style={{ color: '#666', lineHeight: '1.7', marginBottom: '2rem' }}>We offer free cancellation up to 24 hours before your scheduled pickup time. For cancellations made within 24 hours, a small fee may apply. Please refer to your booking confirmation for specific terms.</p>

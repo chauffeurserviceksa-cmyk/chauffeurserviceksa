@@ -7,8 +7,8 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: 'Cities We Serve | Luxury Chauffeur Service KSA',
-  description: 'Premium private driver and luxury chauffeur services across all major cities in Saudi Arabia including Riyadh, Jeddah, Makkah, Madinah, and Dammam.',
+  title: 'Cities We Serve | Chauffeur Service KSA',
+  description: 'Professional private driver and chauffeur services across all major cities in Saudi Arabia including Riyadh, Jeddah, Makkah, Madinah, and Dammam.',
   alternates: {
     canonical: 'https://chauffeurserviceksa.com/cities',
   },
@@ -19,7 +19,7 @@ export default function CitiesPage() {
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Chauffeur Service KSA Network",
-    "description": "Premium luxury chauffeur and private driver services across Saudi Arabia, including Riyadh, Jeddah, Makkah, Madinah, and Dammam.",
+    "description": "Professional chauffeur and private driver services across Saudi Arabia, including Riyadh, Jeddah, Makkah, Madinah, and Dammam.",
     "provider": {
       "@type": "LocalBusiness",
       "name": "Chauffeur KSA",
@@ -71,7 +71,7 @@ export default function CitiesPage() {
             Cities We Serve
           </h1>
           <p style={{ fontSize: '1.2rem', opacity: 0.9, maxWidth: '700px', margin: '0 auto', lineHeight: '1.7' }}>
-            Experience consistent, high-standard VIP private driver services throughout the Kingdom's key business and pilgrimage centers.
+            Experience consistent, high-standard private driver services throughout the Kingdom's key business and pilgrimage centers.
           </p>
         </div>
       </section>

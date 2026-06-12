@@ -6,7 +6,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Fleet | Chauffeur Service KSA',
-  description: 'Explore our premium fleet of luxury vehicles, curated for comfort, safety, and style across Saudi Arabia.',
+  description: 'Explore our fleet of modern vehicles, curated for comfort and safety across Saudi Arabia.',
   alternates: {
     canonical: 'https://chauffeurserviceksa.com/fleet',
   },
@@ -30,7 +30,7 @@ export default function FleetPage() {
       >
         <div className="container">
           <h1 style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', fontFamily: 'var(--font-heading)', marginBottom: '1rem' }}>
-            Our Luxury Fleet
+            Our Vehicle Fleet
           </h1>
           <p style={{ fontSize: '1.2rem', opacity: 0.9 }}>
             Sophisticated, safe, and ready for every journey across the Kingdom.

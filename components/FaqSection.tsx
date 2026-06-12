@@ -5,11 +5,11 @@ import { ChevronDown } from 'lucide-react';
 
 const faqs = [
   { q: "How much does a chauffeur service cost in Saudi Arabia?", a: "Chauffeur service costs in Saudi Arabia vary by vehicle type and distance. We offer transparent pricing for airport transfers, intercity rides, and hourly hire with no hidden fees." },
-  { q: "Do you offer airport transfers in Riyadh and Jeddah?", a: "Yes, we provide premium airport transfers at King Khalid International (RUH) in Riyadh and King Abdulaziz International (JED) in Jeddah, including meet-and-greet services." },
+  { q: "Do you offer airport transfers in Riyadh and Jeddah?", a: "Yes, we provide airport transfers at King Khalid International (RUH) in Riyadh and King Abdulaziz International (JED) in Jeddah, including meet-and-greet services." },
   { q: "Can I book a private driver for Umrah travel?", a: "Absolutely. We specialize in private driver services for Umrah pilgrims, providing seamless transfers between Jeddah Airport, Makkah, and Madinah with total comfort." },
-  { q: "Do you provide intercity chauffeur rides between Saudi cities?", a: "Yes, we offer comfortable intercity chauffeur rides between all major Saudi cities including Riyadh, Jeddah, Dammam, Makkah, and Madinah using our luxury fleet." },
+  { q: "Do you provide intercity chauffeur rides between Saudi cities?", a: "Yes, we offer comfortable intercity chauffeur rides between all major Saudi cities including Riyadh, Jeddah, Dammam, Makkah, and Madinah using our vehicle fleet." },
   { q: "Are your chauffeurs licensed in Saudi Arabia?", a: "Yes, all our chauffeurs are highly trained, professionally licensed, and background-checked according to Saudi Arabian transportation standards for your absolute safety." },
-  { q: "Which vehicles are available in your luxury fleet?", a: "Our elite collection includes the Mercedes S-Class, BMW 7 Series, GMC Yukon XL, and Cadillac Escalade, all meticulously maintained for VIP business and leisure travel." }
+  { q: "Which vehicles are available in your fleet?", a: "Our collection includes the Mercedes S-Class, BMW 7 Series, GMC Yukon XL, and Cadillac Escalade, all meticulously maintained for business and leisure travel." }
 ];
 
 export default function FaqSection() {

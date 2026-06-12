@@ -14,7 +14,7 @@ const CATEGORIES = [
   "City Travel Guides", 
   "Pilgrimage Travel Guides", 
   "Intercity Route Guides", 
-  "VIP Airport Transfers", 
+  "Airport Transfers", 
   "Professional Driver Services", 
   "Chauffeur Service Benefits"
 ];
@@ -28,8 +28,8 @@ export default function BlogsPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Blog",
-    "name": "Luxury Chauffeur Service Saudi Arabia Blog",
-    "description": "Expert luxury travel guides, private driver tips, and VIP airport transfer insights for Saudi Arabia.",
+    "name": "Chauffeur Service Saudi Arabia Blog",
+    "description": "Expert travel guides, private driver tips, and airport transfer insights for Saudi Arabia.",
     "publisher": {
       "@type": "Organization",
       "name": "Chauffeur KSA"
@@ -110,7 +110,7 @@ export default function BlogsPage() {
               transition={{ delay: 0.1 }}
               style={{ fontSize: 'clamp(2.5rem, 5vw, 4.2rem)', color: 'white', fontFamily: 'var(--font-playfair)', lineHeight: '1.2', marginBottom: '1.5rem' }}
             >
-              Luxury Chauffeur Service Saudi Arabia & <br /> <span style={{ color: 'var(--color-gold)' }}>Expert Travel Guides</span>
+              Chauffeur Service Saudi Arabia & <br /> <span style={{ color: 'var(--color-gold)' }}>Expert Travel Guides</span>
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
@@ -118,7 +118,7 @@ export default function BlogsPage() {
               transition={{ delay: 0.2 }}
               style={{ color: 'rgba(255,255,255,0.6)', fontSize: '1.15rem', maxWidth: '900px', margin: '0 auto', lineHeight: '1.9' }}
             >
-              Welcome to the official Chauffeur KSA blog. Our experts provide the ultimate <strong>luxury travel guides</strong> and <strong>private driver Saudi Arabia</strong> insights for corporate executives and spiritual pilgrims. Whether you are seeking seamless <strong>VIP airport transfers</strong> in Riyadh and Jeddah or dedicated <strong>Umrah chauffeur services</strong> in Makkah, discover how professional ground transportation elevates your journey across the Kingdom.
+              Welcome to the official Chauffeur KSA blog. Our experts provide comprehensive <strong>travel guides</strong> and <strong>private driver Saudi Arabia</strong> insights for corporate executives and spiritual pilgrims. Whether you are seeking seamless <strong>airport transfers</strong> in Riyadh and Jeddah or dedicated <strong>Umrah chauffeur services</strong> in Makkah, discover how professional ground transportation elevates your journey across the Kingdom.
             </motion.p>
           </div>
 
@@ -264,7 +264,7 @@ export default function BlogsPage() {
                 </motion.div>
               )) : (
                 <div style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '4rem', color: 'rgba(255,255,255,0.4)' }}>
-                   <p style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>No luxury guides found matching "{searchQuery}"</p>
+                   <p style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>No guides found matching "{searchQuery}"</p>
                    <button onClick={() => setSearchQuery("")} style={{ color: 'var(--color-gold)', background: 'none', border: 'none', cursor: 'pointer', textDecoration: 'underline' }}>Clear search</button>
                 </div>
               )}
@@ -290,15 +290,15 @@ export default function BlogsPage() {
                 onMouseEnter={(e) => { e.currentTarget.style.background = 'var(--color-gold)'; e.currentTarget.style.color = '#111'; }}
                 onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--color-gold)'; }}
               >
-                Load More Luxury Guides
+                Load More Travel Guides
               </button>
             </div>
           )}
 
           {/* Call to Action Section */}
           <section style={{ marginTop: '8rem', padding: '5rem', borderRadius: '30px', background: 'rgba(201,162,39,0.05)', border: '1px solid rgba(201,162,39,0.1)', textAlign: 'center' }}>
-             <h2 style={{ color: 'white', fontSize: '2.5rem', fontFamily: 'var(--font-playfair)', marginBottom: '1.5rem' }}>Experience Ultimate Luxury Ground Transport</h2>
-             <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '1.2rem', maxWidth: '800px', margin: '0 auto 2.5rem' }}>Ready to elevate your travel experience in Saudi Arabia? Whether you need a private driver for Umrah or an executive airport transfer, our elite fleet is ready for you.</p>
+             <h2 style={{ color: 'white', fontSize: '2.5rem', fontFamily: 'var(--font-playfair)', marginBottom: '1.5rem' }}>Experience Professional Ground Transport</h2>
+             <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '1.2rem', maxWidth: '800px', margin: '0 auto 2.5rem' }}>Ready to elevate your travel experience in Saudi Arabia? Whether you need a private driver for Umrah or an executive airport transfer, our vehicle fleet is ready for you.</p>
              <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem' }}>
                 <Link href="/" style={{ background: 'var(--color-gold)', color: '#111', padding: '1rem 2.5rem', borderRadius: '50px', textDecoration: 'none', fontWeight: 600 }}>Reserve Your Chauffeur</Link>
                 <Link href="/routes" style={{ background: 'transparent', border: '1px solid var(--color-gold)', color: 'var(--color-gold)', padding: '1rem 2.5rem', borderRadius: '50px', textDecoration: 'none', fontWeight: 600 }}>Explore Local Routes</Link>

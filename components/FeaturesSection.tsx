@@ -4,11 +4,11 @@ import { motion } from 'framer-motion';
 
 const features = [
   { icon: <User size={40} />, title: 'Professional Chauffeurs', text: 'Highly trained and experienced chauffeurs with deep local knowledge of Saudi roads.' },
-  { icon: <Award size={40} />, title: 'Luxury Vehicles', text: 'An elite fleet of impeccably maintained, late-model luxury sedans and executive SUVs.' },
+  { icon: <Award size={40} />, title: 'Modern Vehicles', text: 'An collection of impeccably maintained, late-model high-class sedans and executive SUVs.' },
   { icon: <Plane size={40} />, title: 'Reliable Airport Transfers', text: 'Punctual meet-and-greet services at all major Saudi airports with flight tracking.' },
   { icon: <Briefcase size={40} />, title: 'Corporate Travel Solutions', text: 'Tailored chauffeur services for executives, business delegations, and corporate events.' },
   { icon: <Clock4 size={40} />, title: 'Punctual Service', text: 'Real-time traffic monitoring ensures our chauffeurs are always on time, every time.' },
-  { icon: <ShieldCheck size={40} />, title: 'Absolute Discretion', text: 'Confidential and highly discreet transportation for VIPs, diplomats, and private guests.' }
+  { icon: <ShieldCheck size={40} />, title: 'Absolute Discretion', text: 'Confidential and highly discreet transportation for diplomats, corporate delegates, and private guests.' }
 ];
 
 export default function FeaturesSection() {
@@ -23,7 +23,7 @@ export default function FeaturesSection() {
               Why Choose Our Chauffeur Service
             </h2>
             <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '2rem' }}>
-              We pride ourselves on offering more than just a ride. We offer an experience characterized by absolute discretion, uncompromised safety, and unmatched luxury. 
+              We pride ourselves on offering more than just a ride. We offer an experience characterized by absolute discretion, uncompromised safety, and unmatched comfort. 
             </p>
             <a href="#contact" className="btn-gold" style={{ padding: '1rem 2rem', borderRadius: '8px' }}>Book Your Ride</a>
           </motion.div>

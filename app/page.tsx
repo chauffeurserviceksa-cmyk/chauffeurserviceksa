@@ -110,16 +110,18 @@ export default function Home() {
       <TrustSection />
       
       {/* About Company Snippet */}
-      <section id="about" style={{ padding: '8rem 0', background: '#111', color: 'white', textAlign: 'center' }}>
-         <div className="container" style={{ maxWidth: '900px' }}>
-            <span style={{ color: 'var(--color-gold)', fontWeight: 600, letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.9rem' }}>Welcome to Chauffeur KSA</span>
-            <h2 style={{ fontSize: '3rem', margin: '1rem 0 2rem', fontFamily: 'var(--font-heading)' }}>Defining Luxury Ground Transportation in Saudi Arabia</h2>
-            <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.2rem', lineHeight: '1.9', marginBottom: '2rem' }}>
-              Chauffeur KSA is a premier, fully licensed ground transportation company operating under the regulations of the Transport General Authority (TGA) of Saudi Arabia. With a physical headquarters located in the Olaya District, Riyadh, we offer bespoke travel solutions for diplomats, corporate executives, and VIP guests across the Kingdom.
-            </p>
-            <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.2rem', lineHeight: '1.9' }}>
-              We specialize in premium <a href="/services" style={{ color: 'var(--color-gold)', textDecoration: 'underline' }}>luxury airport transfer services</a> at King Khalid International Airport (RUH) in Riyadh and King Abdulaziz International Airport (JED) in Jeddah, alongside elite <a href="/services" style={{ color: 'var(--color-gold)', textDecoration: 'underline' }}>private chauffeur drivers</a> for intercity business trips and spiritual Hajj & Umrah transfers to Makkah and Madinah. We guarantee 100% punctuality, absolute privacy, and a pristine <a href="/fleet" style={{ color: 'var(--color-gold)', textDecoration: 'underline' }}>luxury vehicle fleet</a>.
-            </p>
+      <section id="about" className="section-padding section-dark text-center">
+         <div className="container" style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
+            <span style={{ color: 'var(--accent-primary)', fontWeight: 600, letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.9rem' }}>Welcome to Chauffeur KSA</span>
+            <h2 className="text-gradient" style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', margin: '1rem 0 2rem', lineHeight: 1.2 }}>Defining Professional Ground Transportation in Saudi Arabia</h2>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', fontSize: '1.15rem', lineHeight: '1.9', color: 'var(--text-secondary)' }}>
+              <p>
+                Chauffeur KSA is a fully licensed ground transportation company operating under the regulations of the Transport General Authority (TGA) of Saudi Arabia. With a physical headquarters located in the Olaya District, Riyadh, we offer bespoke travel solutions for diplomats, corporate executives, and international guests across the Kingdom.
+              </p>
+              <p>
+                We specialize in reliable <a href="/services" style={{ color: 'var(--accent-primary)', textDecoration: 'underline' }}>airport transfer services</a> at King Khalid International Airport (RUH) in Riyadh and King Abdulaziz International Airport (JED) in Jeddah, alongside professional <a href="/services" style={{ color: 'var(--accent-primary)', textDecoration: 'underline' }}>private chauffeur drivers</a> for intercity business trips and spiritual Hajj & Umrah transfers to Makkah and Madinah. We guarantee 100% punctuality, absolute privacy, and a pristine <a href="/fleet" style={{ color: 'var(--accent-primary)', textDecoration: 'underline' }}>modern vehicle fleet</a>.
+              </p>
+            </div>
          </div>
       </section>
 

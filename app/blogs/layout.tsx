@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Luxury Travel Guides | Chauffeur KSA Blog',
+  title: 'Saudi Arabia Travel Guides | Chauffeur KSA Blog',
   description: 'Explore Chauffeur KSA travel guides. Tips on airport transfers, intercity routes, and private driver services across Saudi Arabia.',
   alternates: {
     canonical: 'https://chauffeurserviceksa.com/blogs',

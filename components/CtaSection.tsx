@@ -16,10 +16,10 @@ export default function CtaSection() {
       <div className="container" style={{ position: 'relative', zIndex: 10, textAlign: 'center' }}>
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <h2 style={{ fontSize: '3.5rem', marginBottom: '1.5rem', color: 'white', fontFamily: 'var(--font-heading)' }}>
-            Ready for a <span style={{ color: 'var(--color-gold)' }}>First-Class</span> Ride?
+            Ready for a <span style={{ color: 'var(--color-gold)' }}>Seamless</span> Ride?
           </h2>
           <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.25rem', maxWidth: '750px', margin: '0 auto 3rem', lineHeight: '1.9' }}>
-            Whether it's an airport transfer, an important business meeting, or a VIP event, we have the perfect luxury vehicle and professional chauffeur ready for you.
+            Whether it's an airport transfer, an important business meeting, or a corporate event, we have the perfect vehicle and professional chauffeur ready for you.
           </p>
           <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
             <a href="#contact" className="btn-gold" style={{ padding: '1.2rem 3.5rem', fontSize: '1rem', borderRadius: '50px', fontWeight: 700, textTransform: 'none' }}>
