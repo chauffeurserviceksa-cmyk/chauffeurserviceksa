@@ -75,7 +75,7 @@ export default function Hero() {
               <span style={{ fontSize: '1.1rem' }}>★</span>
             </div>
             <span style={{ fontSize: '0.95rem', fontWeight: 600, letterSpacing: '0.5px', color: 'rgba(255,255,255,0.95)' }}>
-              Rated 4.9/5 by 500+ satisfied clients
+              TGA Licensed Operator • 4.9/5 Rating (500+ Verified Clients)
             </span>
           </div>
 
@@ -89,27 +89,57 @@ export default function Hero() {
             fontWeight: 700,
             letterSpacing: '-0.02em'
           }}>
-            Premium Chauffeur & Private Driver in <br /> 
-            <span style={{ color: 'var(--color-gold)' }}>Saudi Arabia</span>
+            Professional Chauffeur & Private Driver Services <br /> 
+            <span style={{ color: 'var(--color-gold)' }}>across Saudi Arabia</span>
           </h1>
           <p style={{ 
-            fontSize: '1.25rem', 
+            fontSize: '1.2rem', 
             color: 'rgba(255,255,255,0.8)', 
-            marginBottom: '3rem', 
+            marginBottom: '2rem', 
             maxWidth: '650px', 
             lineHeight: '1.8' 
           }}>
-            Experience the ultimate chauffeur service Saudi Arabia, offering premium airport transfer Saudi Arabia, comfortable intercity chauffeur rides, and professional private driver Saudi Arabia solutions tailored for discerning travelers.
+            Reliable ground transportation for airport transfers, intercity travel, and daily corporate journeys. Operating under official Saudi transport regulations, our professional drivers ensure punctual and seamless transfers between Riyadh, Jeddah, Makkah, Madinah, and Dammam.
           </p>
+
+          <ul style={{ 
+            listStyle: 'none', 
+            padding: 0, 
+            margin: '0 0 2.5rem 0',
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+            gap: '1rem',
+            maxWidth: '650px'
+          }}>
+            {[
+              'Professional Drivers',
+              'Airport Transfers',
+              'Intercity Travel',
+              '24/7 Availability',
+              'Easy Booking Process'
+            ].map((benefit, idx) => (
+              <li key={idx} style={{ 
+                display: 'flex', 
+                alignItems: 'center', 
+                gap: '0.6rem', 
+                color: 'rgba(255,255,255,0.9)', 
+                fontSize: '1rem' 
+              }}>
+                <span style={{ color: 'var(--color-gold)', fontWeight: 'bold' }}>✓</span>
+                {benefit}
+              </li>
+            ))}
+          </ul>
           
           <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
-            <a href="#services" className="btn-gold" style={{ padding: '1.1rem 3rem', fontSize: '1rem', borderRadius: '50px' }}>
-              Explore Services
+            <a href="#booking-form" className="btn-gold" style={{ padding: '1.1rem 3rem', fontSize: '1rem', borderRadius: '50px' }}>
+              Book Your Journey
             </a>
           </div>
         </motion.div>
 
         <motion.div 
+          id="booking-form"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}

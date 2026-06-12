@@ -46,7 +46,7 @@ export default function ContactForm() {
       }}>
         Book Your Chauffeur
       </h2>
-      <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem', marginBottom: '1.5rem' }}>Experience the ultimate private driver experience.</p>
+      <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem', marginBottom: '1.5rem' }}>Licensed drivers, airport pickups, and intercity transit.</p>
       
       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
         
@@ -76,7 +76,7 @@ export default function ContactForm() {
               <option value="Airport Transfer" style={{ color: 'black' }}>Airport Transfer Services</option>
               <option value="City to City" style={{ color: 'black' }}>Intercity Chauffeur Rides</option>
               <option value="Umrah" style={{ color: 'black' }}>Umrah Travel Routes</option>
-              <option value="Corporate" style={{ color: 'black' }}>VIP Corporate Chauffeur Travel</option>
+              <option value="Corporate" style={{ color: 'black' }}>Corporate Chauffeur Travel</option>
             </select>
         </div>
 
